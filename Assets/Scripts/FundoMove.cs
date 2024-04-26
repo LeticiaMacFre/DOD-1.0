@@ -20,7 +20,7 @@ public class FundoMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float temp = (cameraPlayer.transform.position.x * (1 - velocidadeParallax));
         float dist = (cameraPlayer.transform.position.x * velocidadeParallax);

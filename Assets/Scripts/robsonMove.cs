@@ -23,7 +23,7 @@ public class robsonMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
         Jump();

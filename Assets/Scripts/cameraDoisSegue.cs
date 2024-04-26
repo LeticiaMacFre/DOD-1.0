@@ -3,15 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class cameraSegue : MonoBehaviour
+public class cameraDoisSegue : MonoBehaviour
 {
+   /* public GameObject player;
+    private Vector3 inicialDoisPosPlayer;
+    private Vector3 inicialDoisPosCamera;
+    private Vector3 doisSeguePosPlayer = new Vector3(0, 0, 0);
+    private Vector3 limiteDoisPosPlayer = new Vector3(0, 0, 0);
+    private bool seguePlayerDois;
+    private bool limitePlayerDois;
+
+
+    private void Start()
+    {
+        inicialDoisPosPlayer = player.transform.position;
+        inicialDoisPosCamera = transform.localPosition;
+        
+    }
+
+    private void Update()
+    {
+       if(player.transform.position.x <= doisSeguePosPlayer && !limitePlayerDois)
+    }
+
+    */
+   
+    
     public GameObject player;
     private Vector3 inicialPosPlayer;
     private Vector3 inicialPosCamera;
-    //private Vector3 seguePosPlayer = new Vector3(0, -1.304f, 0);
-    //private Vector3 limitePosPlayer = new Vector3(113.946f, 0, 0);
-    public GameObject objInicial;
-    public GameObject objFinal;
+    private Vector3 seguePosPlayer = new Vector3(0, -4.276536f, 0);
+    private Vector3 limitePosPlayer = new Vector3(-1.120974f, 0, 0);
     private bool seguePlayer = false;
     private bool seguePulo = false;
     private bool limitePlayer = false;
@@ -28,8 +50,7 @@ public class cameraSegue : MonoBehaviour
     {
         //transform.position = player.transform.position + new Vector3(0, 0, -10);
 
-        //if(player.transform.position.x >= seguePosPlayer.x && !limitePlayer)
-        if (player.transform.position.x >= objInicial.transform.position.x && !limitePlayer)
+        if (player.transform.position.x >= seguePosPlayer.x && !limitePlayer)
         {
             seguePlayer = true;
         }
@@ -38,8 +59,7 @@ public class cameraSegue : MonoBehaviour
             seguePlayer = false;
         }
 
-        //if (player.transform.position.y >= seguePosPlayer.y)
-        if (player.transform.position.y >= objInicial.transform.position.y)
+        if (player.transform.position.y >= seguePosPlayer.y)
         {
             seguePulo = true;
         }
@@ -60,8 +80,7 @@ public class cameraSegue : MonoBehaviour
          }
         */
 
-        //if (player.transform.position.x >= limitePosPlayer.x)
-        if (player.transform.position.x >= objFinal.transform.position.x)
+        if (player.transform.position.x >= limitePosPlayer.x)
         {
             limitePlayer = true;
         }
@@ -70,6 +89,10 @@ public class cameraSegue : MonoBehaviour
             limitePlayer = false;
         }
 
-        
+
     }
 }
+
+
+
+
