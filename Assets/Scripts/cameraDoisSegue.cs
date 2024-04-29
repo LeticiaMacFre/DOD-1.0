@@ -73,12 +73,12 @@ public class cameraDoisSegue : MonoBehaviour
             transform.position = new Vector3(player.transform.position.x, inicialPosCamera.y, -10);
         }
 
-        /* 
-         if(seguePulo)
-         {
-             transform.position += new Vector3(player.transform.position.x, player.transform.position.y, -10);
-         }
-        */
+       
+        if(seguePulo)
+        {
+            transform.position += new Vector3(player.transform.position.x, player.transform.position.y, -10);
+        }
+        
 
         if (player.transform.position.x >= limitePosPlayer.x)
         {

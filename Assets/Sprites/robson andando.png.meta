@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f024fc7181c97b84ba3ab756adc9d7af
+guid: 15b67fede79a0d44f8bc0991a2dc7b0a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robson andando (1) true_0
+      name: robson andando_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 100
-        height: 100
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c36db7d989ba374c98f7fe57a790310
-      internalID: 511533832
+      spriteID: 08693849344bbea42acefce2f54552c9
+      internalID: 1774981086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robson andando (1) true_1
+      name: robson andando_1
       rect:
         serializedVersion: 2
-        x: 100
+        x: 400
         y: 0
-        width: 100
-        height: 100
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e811543a6e803ea4585a1cc026aec219
-      internalID: -195618573
+      spriteID: 427781929c8d89f45b4930978e53b5ab
+      internalID: -1734778316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robson andando (1) true_2
+      name: robson andando_2
       rect:
         serializedVersion: 2
-        x: 200
+        x: 800
         y: 0
-        width: 100
-        height: 100
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11bc6cc50e7620f439c3e7a1a270c053
-      internalID: -1937664472
+      spriteID: a496d4412dafe944680aa69fa8a7f9e0
+      internalID: -1331881772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robson andando (1) true_3
+      name: robson andando_3
       rect:
         serializedVersion: 2
-        x: 300
+        x: 1200
         y: 0
-        width: 100
-        height: 100
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c41811534f03f2e4985822efa4c23747
-      internalID: -1475240633
+      spriteID: c1cdf784ef9104e4a8c3381f622ba674
+      internalID: -1791599290
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      robson andando (1) true_0: 511533832
-      robson andando (1) true_1: -195618573
-      robson andando (1) true_2: -1937664472
-      robson andando (1) true_3: -1475240633
+      robson andando_0: 1774981086
+      robson andando_1: -1734778316
+      robson andando_2: -1331881772
+      robson andando_3: -1791599290
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

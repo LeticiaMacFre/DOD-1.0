@@ -23,7 +23,7 @@ public class FadeInOut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         if (fadein == true)
         {
             if (image.color.a <= 0)
@@ -48,9 +48,8 @@ public class FadeInOut : MonoBehaviour
                 }
             }
         }
-        */
-
-
+        
+        
     }
 
     public void FadeIn()

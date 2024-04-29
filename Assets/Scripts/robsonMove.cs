@@ -29,15 +29,18 @@ public class robsonMove : MonoBehaviour
         Jump();
     }
 
+   
+
     private void Move()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += movement * Time.deltaTime * Speed; 
     }
 
+    
     private void Jump()
     {
-        if(Input.GetButtonDown("Jump") && !isJumping)
+        if(Input.GetButton("Jump") && !isJumping)
         {
             rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
             isJumping = true;

@@ -4690,7 +4690,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &695766623
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4738,7 +4738,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695766622}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -8903,6 +8903,7 @@ GameObject:
   - component: {fileID: 1360715957}
   - component: {fileID: 1360715956}
   - component: {fileID: 1360715958}
+  - component: {fileID: 1360715959}
   m_Layer: 7
   m_Name: Robson
   m_TagString: Player
@@ -8971,8 +8972,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
-  m_Sprite: {fileID: 1601481779, guid: 5256cf9fc8031914e85583c45fbec8ed, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 1774981086, guid: 15b67fede79a0d44f8bc0991a2dc7b0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8992,8 +8993,8 @@ Transform:
   m_GameObject: {fileID: 1360715951}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9, y: -1.304, z: 0}
-  m_LocalScale: {x: 0.11027016, y: 0.11194848, z: 0.1512}
+  m_LocalPosition: {x: -0.895, y: -1.39, z: 0}
+  m_LocalScale: {x: 0.10966403, y: 0.111333124, z: 0.15036888}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -9061,7 +9062,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.999998, y: 20.01953}
+    oldSize: {x: 20, y: 20}
     newSize: {x: 19.999998, y: 20.01953}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9087,6 +9088,20 @@ MonoBehaviour:
   isJumping: 0
   fade: {fileID: 695766624}
   image: {fileID: 695766622}
+--- !u!114 &1360715959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360715951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee5601fa05420b345910699ccfddce4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedAndando: 1
+  animPlayer: {fileID: 1360715952}
 --- !u!1 &1381722148
 GameObject:
   m_ObjectHideFlags: 0
@@ -10831,6 +10846,7 @@ GameObject:
   - component: {fileID: 1644520076}
   - component: {fileID: 1644520075}
   - component: {fileID: 1644520074}
+  - component: {fileID: 1644520078}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -10921,6 +10937,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1644520078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1644520073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 557badfcd5ad69240be8a9a0e7af2fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasgroup: {fileID: 695766622}
+  fadein: 0
+  fadeout: 0
+  TimeToFade: 1
 --- !u!1 &1680499914
 GameObject:
   m_ObjectHideFlags: 0
