@@ -5,17 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class robsonMove : MonoBehaviour
 {
-
+    /*
     public float Speed;
     public float JumpForce;
     public bool isJumping;
+    private Rigidbody2D rig;
+    */
     public Animator fade;
     public GameObject image;
-    private Rigidbody2D rig;
 
 
 
     // Start is called before the first frame update
+    
+    /*
     void Start()
     {
         rig = GetComponent<Rigidbody2D>();
@@ -54,6 +57,7 @@ public class robsonMove : MonoBehaviour
             isJumping = false;
         }
     }
+    */
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
