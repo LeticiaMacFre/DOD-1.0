@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5256cf9fc8031914e85583c45fbec8ed
+guid: e675e613294c46f42ad63ff8f54947d1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -47,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 30
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,6 +64,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
@@ -75,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -87,18 +90,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Server
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -111,19 +103,20 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robson idle sprite_0
+      name: Robson pulando (3) (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 400
-        height: 400
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb935afff56dca347abde841ca0eb763
-      internalID: 1601481779
+      spriteID: 0109d65797622c440a0baa285f77b9a9
+      internalID: 401113924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robson idle sprite_1
+      name: Robson pulando (3) (1)_1
       rect:
         serializedVersion: 2
-        x: 400
+        x: 300
         y: 0
-        width: 400
-        height: 400
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe4d1f065e78b0449836dd7a5e94974b
-      internalID: -934001346
+      spriteID: 2df65a407c0fb3c42832a39ff9b2e612
+      internalID: 168565264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robson idle sprite_2
+      name: Robson pulando (3) (1)_2
       rect:
         serializedVersion: 2
-        x: 800
+        x: 600
         y: 0
-        width: 400
-        height: 400
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +166,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d83f23dda35add408b81a807b79831b
-      internalID: -498824597
+      spriteID: 002e5d901b699184291a7c2e01a60e31
+      internalID: 26394547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robson idle sprite_3
+      name: Robson pulando (3) (1)_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b130ef99be2484745a025f3a3214e1ea
+      internalID: -1168272722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Robson pulando (3) (1)_4
       rect:
         serializedVersion: 2
         x: 1200
         y: 0
-        width: 400
-        height: 400
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80fc07b91415b7c4cb8aa33ef0b08d35
-      internalID: 490374042
+      spriteID: 8a023644a0291a54580c56d53a98fa08
+      internalID: 963429040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: robson idle sprite_4
+      name: Robson pulando (3) (1)_5
       rect:
         serializedVersion: 2
-        x: 1600
+        x: 1500
         y: 0
-        width: 400
-        height: 400
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,113 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68b2b683a4997e747ae4ec629ea20aba
-      internalID: -19957602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robson idle sprite_5
-      rect:
-        serializedVersion: 2
-        x: 2000
-        y: 0
-        width: 400
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c8e6cab1a8d4c624c9f4de834794a1ab
-      internalID: 245286254
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robson idle sprite_6
-      rect:
-        serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 400
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a46c243b372509438e6b84a620d1d3e
-      internalID: 1480196240
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robson idle sprite_7
-      rect:
-        serializedVersion: 2
-        x: 2800
-        y: 0
-        width: 400
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63636f2764ee4554284e7760e3ea9f6c
-      internalID: 135626092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robson idle sprite_8
-      rect:
-        serializedVersion: 2
-        x: 3200
-        y: 0
-        width: 400
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae12fbc64fd09c54fbf575454571d8d1
-      internalID: 1435254777
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: robson idle sprite_9
-      rect:
-        serializedVersion: 2
-        x: 3600
-        y: 0
-        width: 400
-        height: 400
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33d7844d9eaedf545b00d1e22e2b6fa3
-      internalID: -2097629867
+      spriteID: f3e35ea64d5ae064a9176067e3f980e1
+      internalID: 1244439571
       vertices: []
       indices: 
       edges: []
@@ -337,19 +246,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      robson idle sprite_0: 1601481779
-      robson idle sprite_1: -934001346
-      robson idle sprite_2: -498824597
-      robson idle sprite_3: 490374042
-      robson idle sprite_4: -19957602
-      robson idle sprite_5: 245286254
-      robson idle sprite_6: 1480196240
-      robson idle sprite_7: 135626092
-      robson idle sprite_8: 1435254777
-      robson idle sprite_9: -2097629867
-  spritePackingTag: 
+      Robson pulando (3) (1)_0: 401113924
+      Robson pulando (3) (1)_1: 168565264
+      Robson pulando (3) (1)_2: 26394547
+      Robson pulando (3) (1)_3: -1168272722
+      Robson pulando (3) (1)_4: 963429040
+      Robson pulando (3) (1)_5: 1244439571
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
