@@ -24,11 +24,11 @@ public class FadeInOut : MonoBehaviour
     void Update()
     {
         
-        if (fadein == true)
+        /*if (fadein == true)
         {
             if (image.color.a <= 0)
             {
-                float valor += TimeToFade * Time.deltaTime;
+                float valor = TimeToFade * Time.deltaTime;
                 image.color;
                 if (canvasgroup.alpha >= 1)
                 {
@@ -49,7 +49,7 @@ public class FadeInOut : MonoBehaviour
             }
         }
         
-        
+        */
     }
 
     public void FadeIn()
@@ -61,7 +61,7 @@ public class FadeInOut : MonoBehaviour
     {
      fadeout = true;
     }   
-}
+    }
     
 
     
