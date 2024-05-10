@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class robsonAndando : MonoBehaviour
@@ -10,6 +11,13 @@ public class robsonAndando : MonoBehaviour
     private float scaleX;
     public float JumpForce;
     public bool isJumping;
+    public bool cinematic = false;
+    public GameObject Dragao;
+    private Animator AnimOvo;
+    public GameObject Ovo;
+    private Vector3 movement;
+    public float moveH;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,46 +27,54 @@ public class robsonAndando : MonoBehaviour
 
     private void Update()
     {
-        
+        if (!cinematic)
+        {
 
-        if(Input.GetKey(KeyCode.A))
-        {
-            animPlayer.SetLayerWeight(2, 1);
-            MoveAndando();
-        }
-        else
-        {
-            animPlayer.SetLayerWeight(2, 0);
-        }
+            if (Input.GetKey(KeyCode.A))
+            {
+                animPlayer.SetLayerWeight(2, 1);
+                MoveAndando();
+            }
+            else
+            {
+                animPlayer.SetLayerWeight(2, 0);
+            }
 
-        if(Input.GetKey(KeyCode.D))
-        {
-            animPlayer.SetLayerWeight(1, 1);
-            MoveAndando();
-        }
-        else
-        {
-            animPlayer.SetLayerWeight(1, 0);
-        }
-        if(Input.GetKey(KeyCode.Space) && !isJumping)
-        {
-            animPlayer.SetLayerWeight(3, 1);
-            Pulando();
-        }
-        else
-        {
-            animPlayer.SetLayerWeight(3, 0);
+            if (Input.GetKey(KeyCode.D))
+            {
+                animPlayer.SetLayerWeight(1, 1);
+                MoveAndando();
+            }
+            else
+            {
+                animPlayer.SetLayerWeight(1, 0);
+            }
+            if (Input.GetKey(KeyCode.Space) && !isJumping)
+            {
+                animPlayer.SetLayerWeight(3, 1);
+                Pulando();
+            }
+            else
+            {
+                animPlayer.SetLayerWeight(3, 0);
+            }
+
+           
         }
     }
     void FixedUpdate()
     {
-        MoveAndando();
-        Pulando();
+        if (!cinematic)
+        {
+            MoveAndando();
+            Pulando();
+        }
     }
 
     private void MoveAndando()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+        moveH = Input.GetAxis("Horizontal");
+        movement = new Vector3(moveH, 0f, 0f);
         transform.position += movement * Time.deltaTime * speedAndando;
     }
 
@@ -76,8 +92,30 @@ public class robsonAndando : MonoBehaviour
         }
     }
 
+    // INTERAÇÃO CAVERNA
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "ovo")
+        {
+            cinematic = true;
+            animPlayer.SetLayerWeight(1, 0);
+            animPlayer.SetLayerWeight(2, 0);
+            animPlayer.SetLayerWeight(3, 0);
+            StartCoroutine("CinematicOvo");
+
+        }
+    }
 
 
-  
+    IEnumerator CinematicOvo()
+    {
+        //AnimOvo.Play("RachaOvo");
+        yield return new WaitForSeconds(5.0f);
+        //Dragao.gameObject.SetActive(true);
+        Ovo.gameObject.SetActive(false);
+        cinematic = false;
+
+    }
 
 }
+    
