@@ -26,4 +26,12 @@ public class AureliusMove : MonoBehaviour
 
         
     }
+
+    void OnCollisionEnter2D(Collision2D collisor)
+    {
+        if (collisor.gameObject.CompareTag("ground"))
+        {
+            isJumping = false;
+        }
+    }
 }
