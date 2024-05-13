@@ -24,9 +24,10 @@ public class AureliusMove : MonoBehaviour
 
         transform.position = new Vector3(Mathf.Lerp(posAtual.x, robPosition.x + offset, velocidade), posAtual.y, 0);
 
-        
-    }
 
+    }
+}
+ /*
     void OnCollisionEnter2D(Collision2D collisor)
     {
         if (collisor.gameObject.CompareTag("ground"))
@@ -35,3 +36,4 @@ public class AureliusMove : MonoBehaviour
         }
     }
 }
+*/
