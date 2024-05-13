@@ -23,6 +23,7 @@ public class robsonAndando : MonoBehaviour
     {
         rigAndando = GetComponent<Rigidbody2D>();
         animPlayer = GetComponent<Animator>();
+        AnimOvo = Ovo.GetComponent<Animator>();
     }
 
     private void Update()
@@ -109,9 +110,10 @@ public class robsonAndando : MonoBehaviour
 
     IEnumerator CinematicOvo()
     {
-        //AnimOvo.Play("RachaOvo");
+        AnimOvo.SetLayerWeight(1,1);
         yield return new WaitForSeconds(5.0f);
-        //Dragao.gameObject.SetActive(true);
+        Dragao.gameObject.SetActive(true);
+        Dragao.GetComponent<AureliusMove>().enabled = true;
         Ovo.gameObject.SetActive(false);
         cinematic = false;
 
