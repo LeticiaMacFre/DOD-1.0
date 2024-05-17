@@ -9,12 +9,14 @@ public class AureliusMove : MonoBehaviour
     public float offset = 2.5f;
     public float velocidade = 0.1f;
     public Vector3 posAtual;
+    public Animator animAurelius;
 
     // Start is called before the first frame update
 
     void Start()
     {
         posAtual = transform.position;
+        animAurelius = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -25,6 +27,27 @@ public class AureliusMove : MonoBehaviour
         transform.position = new Vector3(Mathf.Lerp(posAtual.x, robPosition.x + offset, velocidade), posAtual.y, 0);
 
 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            animAurelius.SetLayerWeight(1, 1);
+        }
+        else
+        {
+            animAurelius.SetLayerWeight(1, 0);
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            animAurelius.SetLayerWeight(2, 1);
+        }
+        else
+        {
+            animAurelius.SetLayerWeight(2, 0);
+        }
     }
 }
  /*
