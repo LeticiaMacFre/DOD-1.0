@@ -8,7 +8,7 @@ public class robsonAndando : MonoBehaviour
     public float speedAndando;
     private Rigidbody2D rigAndando;
     public Animator animPlayer;
-    private float scaleX;
+    private SpriteRenderer sprite;
     public float JumpForce;
     public bool isJumping;
     public bool cinematic = false;
@@ -24,6 +24,7 @@ public class robsonAndando : MonoBehaviour
         rigAndando = GetComponent<Rigidbody2D>();
         animPlayer = GetComponent<Animator>();
         AnimOvo = Ovo.GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -33,31 +34,24 @@ public class robsonAndando : MonoBehaviour
 
             if (Input.GetKey(KeyCode.A))
             {
-                animPlayer.SetLayerWeight(2, 1);
+                animPlayer.SetLayerWeight(1, 1);
+                sprite.flipX = true;
                 MoveAndando();
             }
-            else
-            {
-                animPlayer.SetLayerWeight(2, 0);
-            }
-
-            if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D))
             {
                 animPlayer.SetLayerWeight(1, 1);
+                sprite.flipX = false;
                 MoveAndando();
             }
             else
             {
                 animPlayer.SetLayerWeight(1, 0);
             }
-            if (Input.GetKey(KeyCode.Space) && !isJumping)
+            
+            if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
             {
-                animPlayer.SetLayerWeight(3, 1);
                 Pulando();
-            }
-            else
-            {
-                animPlayer.SetLayerWeight(3, 0);
             }
 
            
@@ -65,11 +59,11 @@ public class robsonAndando : MonoBehaviour
     }
     void FixedUpdate()
     {
-        if (!cinematic)
-        {
-            MoveAndando();
-            Pulando();
-        }
+        //if (!cinematic)
+        //{
+        //    MoveAndando();
+        //    Pulando();
+        //}
     }
 
     private void MoveAndando()
@@ -82,6 +76,7 @@ public class robsonAndando : MonoBehaviour
     private void Pulando()
     {
         rigAndando.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
+        animPlayer.SetLayerWeight(2, 1);
         isJumping = true;
     }
 
@@ -90,6 +85,7 @@ public class robsonAndando : MonoBehaviour
         if (collisor.gameObject.CompareTag("ground"))
         {
             isJumping = false;
+            animPlayer.SetLayerWeight(2, 0);
         }
     }
 
