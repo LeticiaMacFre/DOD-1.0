@@ -35,4 +35,9 @@ public class AureliusOvo : MonoBehaviour
     {
 
     }
+
+    public void AnimacaoOvoStart()
+    {
+        animAurelius.SetLayerWeight(1, 1);
+    }
 }

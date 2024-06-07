@@ -6,12 +6,22 @@ using UnityEngine.SceneManagement;
 public class MenuPrincipal : MonoBehaviour
 {
     public GameObject sound;
+    public GameObject menuInGame;
+    public bool isPaused = false;
 
     void Start()
     {
         if (sound == null)
         {
             sound = GameObject.Find("Sound");
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            MenuInGame();
         }
     }
 
@@ -40,5 +50,31 @@ public class MenuPrincipal : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void MenuInGame()
+    {
+        if(isPaused)
+        {
+            Resume();
+            menuInGame.SetActive(false);
+        }
+        else
+        {
+            Pause();
+            menuInGame.SetActive(true);
+        }
+    }
+
+    private void Pause()
+    {
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+
+    private void Resume()
+    {
+        Time.timeScale = 1;
+        isPaused = false;
     }
 }
