@@ -106,11 +106,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aurelius andando (3)_0
+      name: Aurelios_Walk_1
       rect:
         serializedVersion: 2
         x: 0
@@ -131,7 +144,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_1
+      name: Aurelios_Walk_2
       rect:
         serializedVersion: 2
         x: 400
@@ -152,7 +165,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_2
+      name: Aurelios_Walk_3
       rect:
         serializedVersion: 2
         x: 800
@@ -173,7 +186,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_3
+      name: Aurelios_Walk_4
       rect:
         serializedVersion: 2
         x: 1200
@@ -194,7 +207,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_4
+      name: Aurelios_Walk_5
       rect:
         serializedVersion: 2
         x: 1600
@@ -215,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_5
+      name: Aurelios_Walk_6
       rect:
         serializedVersion: 2
         x: 2000
@@ -236,7 +249,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_6
+      name: Aurelios_Walk_7
       rect:
         serializedVersion: 2
         x: 2400
@@ -257,7 +270,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_7
+      name: Aurelios_Walk_8
       rect:
         serializedVersion: 2
         x: 2800
@@ -278,7 +291,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_8
+      name: Aurelios_Walk_9
       rect:
         serializedVersion: 2
         x: 3200
@@ -299,7 +312,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aurelius andando (3)_9
+      name: Aurelios_Walk_10
       rect:
         serializedVersion: 2
         x: 3600
@@ -330,16 +343,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      aurelius andando (3)_0: 1285145933
-      aurelius andando (3)_1: 46554041
-      aurelius andando (3)_2: 381557
-      aurelius andando (3)_3: -1617271272
-      aurelius andando (3)_4: 2123849748
-      aurelius andando (3)_5: -423601043
-      aurelius andando (3)_6: -1245440862
-      aurelius andando (3)_7: -2141970694
-      aurelius andando (3)_8: -1622328854
-      aurelius andando (3)_9: 737162842
+      Aurelios_Walk_1: 1285145933
+      Aurelios_Walk_10: 737162842
+      Aurelios_Walk_2: 46554041
+      Aurelios_Walk_3: 381557
+      Aurelios_Walk_4: -1617271272
+      Aurelios_Walk_5: 2123849748
+      Aurelios_Walk_6: -423601043
+      Aurelios_Walk_7: -1245440862
+      Aurelios_Walk_8: -2141970694
+      Aurelios_Walk_9: -1622328854
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

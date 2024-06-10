@@ -5,19 +5,18 @@ using UnityEngine;
 
 public class robsonAndando : MonoBehaviour
 {
-    public float speedAndando;
     private Rigidbody2D rigAndando;
-    public Animator animPlayer;
+    private Animator animPlayer;
     private SpriteRenderer sprite;
-    public float JumpForce = 5.0f;
-    public bool isJumping;
-    public bool cinematic = false;
-    public GameObject Dragao;
-    //private Animator AnimOvo;
-    public GameObject Ovo;
+    private AudioSource audio;
     private Vector3 movement;
-    public float moveH;
+    public float JumpForce = 5.0f;
+    public float speedAndando;
+    private bool isJumping;
+    private bool cinematic = false;
+    private float moveH;
     private string nomeObjetoTrigger;
+    public AudioClip jump;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +24,7 @@ public class robsonAndando : MonoBehaviour
         rigAndando = GetComponent<Rigidbody2D>();
         animPlayer = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -57,14 +57,6 @@ public class robsonAndando : MonoBehaviour
            
         }
     }
-    void FixedUpdate()
-    {
-        //if (!cinematic)
-        //{
-        //    MoveAndando();
-        //    Pulando();
-        //}
-    }
 
     private void MoveAndando()
     {
@@ -77,6 +69,8 @@ public class robsonAndando : MonoBehaviour
     {
         rigAndando.AddForce(transform.up * JumpForce, ForceMode2D.Impulse);
         animPlayer.SetLayerWeight(2, 1);
+        audio.clip = jump;
+        audio.Play();
         isJumping = true;
     }
 
@@ -116,5 +110,23 @@ public class robsonAndando : MonoBehaviour
         return nomeObjetoTrigger;
     }
 
+    public string IsMoving()
+    {
+        if (Input.GetKey(KeyCode.A))
+        {
+            Debug.Log("esquerda");
+            return "esquerda";
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            Debug.Log("direita");
+            return "direita";
+        }
+        else
+        {
+            Debug.Log("parado");    
+            return "parado";
+        }
+    }
 }
     

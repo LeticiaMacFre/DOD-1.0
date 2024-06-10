@@ -4,59 +4,77 @@ using UnityEngine;
 
 public class AureliusMove : MonoBehaviour
 {
-    public GameObject robson;
-    public Vector3 robPosition;
+    private GameObject robson;
+    private robsonAndando robsonMove;
+    private Animator animAurelius;
+    private SpriteRenderer spriteAurelius;
+    private Vector3 robPosition;
+    private Vector3 posAtual;
+    private Vector3 posProx;
     public float offset = 2.5f;
     public float velocidade = 0.1f;
-    public Vector3 posAtual;
-    public Animator animAurelius;
-
+    
     // Start is called before the first frame update
-
     void Start()
     {
-        posAtual = transform.position;
+        robson = GameObject.FindGameObjectWithTag("Player");
+        robsonMove = robson.GetComponent<robsonAndando>();
         animAurelius = GetComponent<Animator>();
+        spriteAurelius = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        robPosition = robson.transform.position;
-
-        transform.position = new Vector3(Mathf.Lerp(posAtual.x, robPosition.x + offset, velocidade), posAtual.y, 0);
-
-
+        //float posAurelius = robPosition.x + offset;
+        //transform.position = new Vector3(Mathf.Lerp(posAtual.x, robPosition.x + offset, velocidade), posAtual.y, 0);
+        //transform.position = new Vector3(posAurelius, posAtual.y, 0);
     }
 
     private void Update()
     {
+        robPosition = robson.transform.position;
+
+        /*
         if (Input.GetKey(KeyCode.A))
         {
             animAurelius.SetLayerWeight(1, 1);
+            spriteAurelius.flipX = false;
+        }
+        else
+        {
+            animAurelius.SetLayerWeight(1, 0);
+            
+        }
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            animAurelius.SetLayerWeight(1, 1);
+            spriteAurelius.flipX = true;
         }
         else
         {
             animAurelius.SetLayerWeight(1, 0);
         }
+        */
 
-        if (Input.GetKey(KeyCode.D))
+        if(robsonMove.IsMoving() == "parado")
         {
-            animAurelius.SetLayerWeight(2, 1);
+            posAtual = transform.position;
         }
-        else
+        else if(robsonMove.IsMoving() == "direita")
         {
-            animAurelius.SetLayerWeight(2, 0);
+            spriteAurelius.flipX = true;
+            posProx = new Vector3(robPosition.x + offset, posAtual.y, 0);
+            transform.position = Vector3.Lerp(posAtual, posProx, velocidade);
         }
+        else if(robsonMove.IsMoving() == "esquerda")
+        {
+            spriteAurelius.flipX = false;
+            posProx = new Vector3(robPosition.x - offset, posAtual.y, 0);
+            transform.position = Vector3.Lerp(posAtual, posProx, velocidade);
+        }   
+        
+    
     }
 }
- /*
-    void OnCollisionEnter2D(Collision2D collisor)
-    {
-        if (collisor.gameObject.CompareTag("ground"))
-        {
-            isJumping = false;
-        }
-    }
-}
-*/

@@ -10,7 +10,12 @@ public class DiretorCavernaOvo : MonoBehaviour
     public robsonAndando robson;
     public Animator robsonAnim;
     public GameObject saida;
+    public GameObject sound;
+    public AudioSource audioSource;
+    public AudioClip openEgg;
+    public AudioClip caveLoop;
     public bool startAnimation = false;
+    public float tempoCena = 7.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +24,7 @@ public class DiretorCavernaOvo : MonoBehaviour
         robson = GameObject.FindGameObjectWithTag("Player").GetComponent<robsonAndando>();
         robsonAnim = robson.GetComponent<Animator>();
         ovoAnim = ovo.GetComponent<Animator>();
+        audioSource = sound.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,16 +39,20 @@ public class DiretorCavernaOvo : MonoBehaviour
 
     IEnumerator StartAnimation()
     {
+        audioSource.clip = openEgg;
+        audioSource.Play();
         robson.Cinematic();
         robsonAnim.SetLayerWeight(3, 1);
         ovoAnim.SetLayerWeight(1, 1);   
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(tempoCena);
         ovo.SetActive(false);
         dragao.SetActive(true);
         dragao.GetComponent<AureliusMove>().enabled = true;
         robson.Cinematic();
         robsonAnim.SetLayerWeight(3, 0);
         saida.SetActive(true);
+        audioSource.clip = caveLoop;
+        audioSource.Play();
     }
 
     IEnumerator FadeInicial()
