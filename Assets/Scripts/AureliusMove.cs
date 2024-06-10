@@ -24,53 +24,28 @@ public class AureliusMove : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
-    {
-        //float posAurelius = robPosition.x + offset;
-        //transform.position = new Vector3(Mathf.Lerp(posAtual.x, robPosition.x + offset, velocidade), posAtual.y, 0);
-        //transform.position = new Vector3(posAurelius, posAtual.y, 0);
-    }
-
     private void Update()
     {
         robPosition = robson.transform.position;
 
-        /*
-        if (Input.GetKey(KeyCode.A))
-        {
-            animAurelius.SetLayerWeight(1, 1);
-            spriteAurelius.flipX = false;
-        }
-        else
-        {
-            animAurelius.SetLayerWeight(1, 0);
-            
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            animAurelius.SetLayerWeight(1, 1);
-            spriteAurelius.flipX = true;
-        }
-        else
-        {
-            animAurelius.SetLayerWeight(1, 0);
-        }
-        */
-
         if(robsonMove.IsMoving() == "parado")
         {
             posAtual = transform.position;
+            animAurelius.SetLayerWeight(1, 0);
         }
-        else if(robsonMove.IsMoving() == "direita")
+        
+        if(robsonMove.IsMoving() == "direita")
         {
             spriteAurelius.flipX = true;
+            animAurelius.SetLayerWeight(1, 1);
             posProx = new Vector3(robPosition.x + offset, posAtual.y, 0);
             transform.position = Vector3.Lerp(posAtual, posProx, velocidade);
         }
-        else if(robsonMove.IsMoving() == "esquerda")
+        
+        if(robsonMove.IsMoving() == "esquerda")
         {
             spriteAurelius.flipX = false;
+            animAurelius.SetLayerWeight(1, 1);
             posProx = new Vector3(robPosition.x - offset, posAtual.y, 0);
             transform.position = Vector3.Lerp(posAtual, posProx, velocidade);
         }   
