@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class BatalhaVilao : MonoBehaviour
 {
-    public int vida = 150;
+    private int vidaVilao = 150;
+    private int dano;
+    private Animator animVilao;
+
+    public GameObject player;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        animVilao = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -19,8 +24,19 @@ public class BatalhaVilao : MonoBehaviour
         
     }
 
-    public void Ataque()
+    public void AntecipaAtaque()
+    {
+        animVilao.SetLayerWeight(1, 1);
+    }
+
+    public void DanoVilao()
     {
         
+        vidaVilao = vidaVilao - dano;
+    }
+
+    public void Ataque()
+    {
+        animVilao.SetLayerWeight(2, 1);
     }
 }

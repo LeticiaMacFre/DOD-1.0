@@ -17,6 +17,9 @@ public class robsonAndando : MonoBehaviour
     private float moveH;
     private string nomeObjetoTrigger;
     public AudioClip jump;
+    private int vidaRob = 55;
+    private int dano = 15;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +56,6 @@ public class robsonAndando : MonoBehaviour
             {
                 Pulando();
             }
-
            
         }
     }
@@ -127,6 +129,17 @@ public class robsonAndando : MonoBehaviour
             Debug.Log("parado");    
             return "parado";
         }
+    }
+
+    public void Dano()
+    {
+        vidaRob = vidaRob - dano;
+        animPlayer.SetLayerWeight(3, 1);
+    }
+
+    public void AtaqueRob()
+    {
+        animPlayer.SetLayerWeight(4, 1);
     }
 }
     
