@@ -160,7 +160,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.18823531, g: 0.13333334, b: 0.03137255, a: 1}
+  m_BackGroundColor: {r: 0.2264151, g: 0.1233535, b: 0.020291913, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1078,6 +1078,7 @@ MonoBehaviour:
   sound: {fileID: 0}
   menuInGame: {fileID: 1009788945}
   isPaused: 0
+  cursorStatus: 1
 --- !u!4 &542117508
 Transform:
   m_ObjectHideFlags: 0
@@ -2604,7 +2605,7 @@ MonoBehaviour:
   openEgg: {fileID: 8300000, guid: ea4e826cb1ddd0240a123702e2bbd910, type: 3}
   caveLoop: {fileID: 8300000, guid: 8eeb2ae6dade7624c8fad8deeb69e69b, type: 3}
   startAnimation: 0
-  tempoCena: 2
+  tempoCena: 5
 --- !u!4 &1655916192
 Transform:
   m_ObjectHideFlags: 0

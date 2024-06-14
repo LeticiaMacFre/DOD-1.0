@@ -8,12 +8,18 @@ public class MenuPrincipal : MonoBehaviour
     public GameObject sound;
     public GameObject menuInGame;
     public bool isPaused = false;
+    public bool cursorStatus = true;
 
     void Start()
     {
         if (sound == null)
         {
             sound = GameObject.Find("Sound");
+        }
+
+        if(SceneManager.GetActiveScene().name == "MenuPrincipal")
+        {
+            Cursor.visible = cursorStatus;
         }
     }
 
@@ -43,6 +49,7 @@ public class MenuPrincipal : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("OneScene");
+        Cursor.visible = !cursorStatus;
         Destroy(sound);
     }
 
@@ -69,12 +76,14 @@ public class MenuPrincipal : MonoBehaviour
     private void Pause()
     {
         Time.timeScale = 0;
+        Cursor.visible = !cursorStatus;
         isPaused = true;
     }
 
     private void Resume()
     {
         Time.timeScale = 1;
+        Cursor.visible = !cursorStatus;
         isPaused = false;
     }
 }
