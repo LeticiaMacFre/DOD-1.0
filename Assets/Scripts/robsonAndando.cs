@@ -19,6 +19,7 @@ public class robsonAndando : MonoBehaviour
     public AudioClip jump;
     private int vidaRob = 55;
     private int dano = 15;
+    private bool estaVivo = true;
     
 
     // Start is called before the first frame update
@@ -57,6 +58,11 @@ public class robsonAndando : MonoBehaviour
                 Pulando();
             }
            
+        } 
+
+        if (vidaRob <= 0)
+        {
+            estaVivo = false;
         }
     }
 
@@ -140,6 +146,11 @@ public class robsonAndando : MonoBehaviour
     public void AtaqueRob()
     {
         animPlayer.SetLayerWeight(4, 1);
+    }
+
+    public bool EstaVivo()
+    {
+        return estaVivo;
     }
 }
     

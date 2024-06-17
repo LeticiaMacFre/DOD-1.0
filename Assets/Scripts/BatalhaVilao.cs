@@ -39,4 +39,10 @@ public class BatalhaVilao : MonoBehaviour
     {
         animVilao.SetLayerWeight(2, 1);
     }
+
+    public void Idle()
+    {
+        animVilao.SetLayerWeight(1, 0);
+        animVilao.SetLayerWeight(2, 0);
+    }
 }

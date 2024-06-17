@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 196e7a85e29e2894095005b547602d86
+guid: e15129cd571549241ae0ee5f90709ed6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_0
+      name: 400x400bola de fogo_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59983b377d3fd4e45adab9ac48544dd7
-      internalID: 52350379
+      spriteID: 816ce9839e30fbd468732e23d457ee28
+      internalID: -2048564718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_1
+      name: 400x400bola de fogo_1
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb30e9625df6adf44b43df42f69d235b
-      internalID: 164019218
+      spriteID: 1dc7dbc9d55a32147856fac6a862e56a
+      internalID: -1875847407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_2
+      name: 400x400bola de fogo_2
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a24c3e5f8ea9fcf418ddc43cf43c1105
-      internalID: 384317480
+      spriteID: b29a364aa145bed41a75fb4c93affc4d
+      internalID: 1397496553
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_3
+      name: 400x400bola de fogo_3
       rect:
         serializedVersion: 2
         x: 1200
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dac71d649d0b6c4b88feb5956c51f9f
-      internalID: 91907581
+      spriteID: a8d477d76f34dca4cb073a28fd51fb6a
+      internalID: -31418073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_4
+      name: 400x400bola de fogo_4
       rect:
         serializedVersion: 2
         x: 1600
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41607fd2fab11824184688415c8d738c
-      internalID: -162509805
+      spriteID: dc39de13a18395b40b1a9b8b89ddd006
+      internalID: -993358557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_5
+      name: 400x400bola de fogo_5
       rect:
         serializedVersion: 2
         x: 2000
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12fef30d009037c44bed13d5dfb5f03d
-      internalID: -1163422684
+      spriteID: 013878a2520b0224fa2416fb3d3d17be
+      internalID: 1793920533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_6
+      name: 400x400bola de fogo_6
       rect:
         serializedVersion: 2
         x: 2400
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 031bfc08a80673a46ad32c150b22113e
-      internalID: 2141529268
+      spriteID: e02d1546a3b174443b3075384a0424d9
+      internalID: -934206009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_7
+      name: 400x400bola de fogo_7
       rect:
         serializedVersion: 2
         x: 2800
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13c4425fc69fb3948b54ed87e8876917
-      internalID: 1238653743
+      spriteID: 54d0a9750cda4bf4990653eff3953f40
+      internalID: 641737211
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_8
+      name: 400x400bola de fogo_8
       rect:
         serializedVersion: 2
         x: 3200
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4800efc8a16fe504b99d051620a4e7b5
-      internalID: -355782805
+      spriteID: e9ebc626b5a2ed045b1b89d729670cca
+      internalID: 784864142
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_9
+      name: 400x400bola de fogo_9
       rect:
         serializedVersion: 2
         x: 3600
         y: 0
         width: 400
-        height: 236
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,113 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abd986b114c87da41ae028a03e9ef8a7
-      internalID: 1746196957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_10
-      rect:
-        serializedVersion: 2
-        x: 4000
-        y: 0
-        width: 400
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 66ca7bac3269aa546b7526a93b213ce8
-      internalID: -740531424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_11
-      rect:
-        serializedVersion: 2
-        x: 4400
-        y: 0
-        width: 400
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cda3f459651ead4e93412b146baf9ae
-      internalID: 745958099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_12
-      rect:
-        serializedVersion: 2
-        x: 4800
-        y: 0
-        width: 400
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c0c5a57bdd589aa40921e709b875ec7b
-      internalID: -8250702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_13
-      rect:
-        serializedVersion: 2
-        x: 5200
-        y: 0
-        width: 400
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c81961a2e583df748a0a834a8f9adf0e
-      internalID: 355019442
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_14
-      rect:
-        serializedVersion: 2
-        x: 5600
-        y: 0
-        width: 400
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb05b37aea665064ebd859e1c7d1ad5e
-      internalID: -603655352
+      spriteID: 596fb7e8fb6f3444db3b8a15b0a313c9
+      internalID: 1746029284
       vertices: []
       indices: 
       edges: []
@@ -448,21 +343,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ataqueinimimigo (4) (1)_0: 52350379
-      ataqueinimimigo (4) (1)_1: 164019218
-      ataqueinimimigo (4) (1)_10: -740531424
-      ataqueinimimigo (4) (1)_11: 745958099
-      ataqueinimimigo (4) (1)_12: -8250702
-      ataqueinimimigo (4) (1)_13: 355019442
-      ataqueinimimigo (4) (1)_14: -603655352
-      ataqueinimimigo (4) (1)_2: 384317480
-      ataqueinimimigo (4) (1)_3: 91907581
-      ataqueinimimigo (4) (1)_4: -162509805
-      ataqueinimimigo (4) (1)_5: -1163422684
-      ataqueinimimigo (4) (1)_6: 2141529268
-      ataqueinimimigo (4) (1)_7: 1238653743
-      ataqueinimimigo (4) (1)_8: -355782805
-      ataqueinimimigo (4) (1)_9: 1746196957
+      400x400bola de fogo_0: -2048564718
+      400x400bola de fogo_1: -1875847407
+      400x400bola de fogo_2: 1397496553
+      400x400bola de fogo_3: -31418073
+      400x400bola de fogo_4: -993358557
+      400x400bola de fogo_5: 1793920533
+      400x400bola de fogo_6: -934206009
+      400x400bola de fogo_7: 641737211
+      400x400bola de fogo_8: 784864142
+      400x400bola de fogo_9: 1746029284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

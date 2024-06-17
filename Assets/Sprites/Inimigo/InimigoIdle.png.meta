@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 196e7a85e29e2894095005b547602d86
+guid: 6364c960cfca0b14e855ed69a71a3b41
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_0
+      name: InimigoIdle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59983b377d3fd4e45adab9ac48544dd7
-      internalID: 52350379
+      spriteID: 810118504a4f5d549906565263ffcafa
+      internalID: -675888057
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_1
+      name: InimigoIdle_1
       rect:
         serializedVersion: 2
         x: 400
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb30e9625df6adf44b43df42f69d235b
-      internalID: 164019218
+      spriteID: c92a30d8f7115504f943a3000bac4987
+      internalID: 776160504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_2
+      name: InimigoIdle_2
       rect:
         serializedVersion: 2
         x: 800
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a24c3e5f8ea9fcf418ddc43cf43c1105
-      internalID: 384317480
+      spriteID: e90fb22bf07b41b4ab2fa45cf4cdd1b2
+      internalID: -266639412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_3
+      name: InimigoIdle_3
       rect:
         serializedVersion: 2
         x: 1200
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7dac71d649d0b6c4b88feb5956c51f9f
-      internalID: 91907581
+      spriteID: 91f1d919bef1a4e44a5f42ddf3caedd1
+      internalID: -2088264843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_4
+      name: InimigoIdle_4
       rect:
         serializedVersion: 2
         x: 1600
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41607fd2fab11824184688415c8d738c
-      internalID: -162509805
+      spriteID: 33a3c2f4f5f39ed4d9588dc0961a742a
+      internalID: -665468072
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_5
+      name: InimigoIdle_5
       rect:
         serializedVersion: 2
         x: 2000
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12fef30d009037c44bed13d5dfb5f03d
-      internalID: -1163422684
+      spriteID: d2cc77f78d02dd9468a93aa4c487c6e5
+      internalID: 2120684755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_6
+      name: InimigoIdle_6
       rect:
         serializedVersion: 2
         x: 2400
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 031bfc08a80673a46ad32c150b22113e
-      internalID: 2141529268
+      spriteID: 99d076a93ec050c4988c0d976cdb6d05
+      internalID: -1975158531
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_7
+      name: InimigoIdle_7
       rect:
         serializedVersion: 2
         x: 2800
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13c4425fc69fb3948b54ed87e8876917
-      internalID: 1238653743
+      spriteID: dfba900016bd31d44b2869bfa89f8917
+      internalID: 1496665846
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_8
+      name: InimigoIdle_8
       rect:
         serializedVersion: 2
         x: 3200
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4800efc8a16fe504b99d051620a4e7b5
-      internalID: -355782805
+      spriteID: 5bf9f7d0d36f25e4c92549a832af4334
+      internalID: -838206301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_9
+      name: InimigoIdle_9
       rect:
         serializedVersion: 2
         x: 3600
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abd986b114c87da41ae028a03e9ef8a7
-      internalID: 1746196957
+      spriteID: 36dabc51ba6de48499721e3cf333d6c8
+      internalID: -1280364066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_10
+      name: InimigoIdle_10
       rect:
         serializedVersion: 2
         x: 4000
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -347,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66ca7bac3269aa546b7526a93b213ce8
-      internalID: -740531424
+      spriteID: ca7c16b4842ffda43bd46347c7f8e2e5
+      internalID: 1459935767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_11
+      name: InimigoIdle_11
       rect:
         serializedVersion: 2
         x: 4400
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -368,20 +368,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8cda3f459651ead4e93412b146baf9ae
-      internalID: 745958099
+      spriteID: 5f93793f6d9401949bdf53451a515253
+      internalID: -837026437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_12
+      name: InimigoIdle_12
       rect:
         serializedVersion: 2
         x: 4800
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -389,20 +389,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0c5a57bdd589aa40921e709b875ec7b
-      internalID: -8250702
+      spriteID: 4062580772c3ca04397e140462416f51
+      internalID: 363499442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_13
+      name: InimigoIdle_13
       rect:
         serializedVersion: 2
         x: 5200
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -410,20 +410,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c81961a2e583df748a0a834a8f9adf0e
-      internalID: 355019442
+      spriteID: 504ff8d29829c98429f68f21063b2dc8
+      internalID: 253897618
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ataqueinimimigo (4) (1)_14
+      name: InimigoIdle_14
       rect:
         serializedVersion: 2
         x: 5600
-        y: 0
+        y: 2
         width: 400
-        height: 236
+        height: 226
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,8 +431,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb05b37aea665064ebd859e1c7d1ad5e
-      internalID: -603655352
+      spriteID: a2b4ebe4029f98c4d80b8f4e606bc6f2
+      internalID: 392397869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InimigoIdle_15
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 2
+        width: 400
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd492006f50c3e74aab5b0f92928c409
+      internalID: 439543280
       vertices: []
       indices: 
       edges: []
@@ -448,21 +469,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ataqueinimimigo (4) (1)_0: 52350379
-      ataqueinimimigo (4) (1)_1: 164019218
-      ataqueinimimigo (4) (1)_10: -740531424
-      ataqueinimimigo (4) (1)_11: 745958099
-      ataqueinimimigo (4) (1)_12: -8250702
-      ataqueinimimigo (4) (1)_13: 355019442
-      ataqueinimimigo (4) (1)_14: -603655352
-      ataqueinimimigo (4) (1)_2: 384317480
-      ataqueinimimigo (4) (1)_3: 91907581
-      ataqueinimimigo (4) (1)_4: -162509805
-      ataqueinimimigo (4) (1)_5: -1163422684
-      ataqueinimimigo (4) (1)_6: 2141529268
-      ataqueinimimigo (4) (1)_7: 1238653743
-      ataqueinimimigo (4) (1)_8: -355782805
-      ataqueinimimigo (4) (1)_9: 1746196957
+      InimigoIdle_0: -675888057
+      InimigoIdle_1: 776160504
+      InimigoIdle_10: 1459935767
+      InimigoIdle_11: -837026437
+      InimigoIdle_12: 363499442
+      InimigoIdle_13: 253897618
+      InimigoIdle_14: 392397869
+      InimigoIdle_15: 439543280
+      InimigoIdle_2: -266639412
+      InimigoIdle_3: -2088264843
+      InimigoIdle_4: -665468072
+      InimigoIdle_5: 2120684755
+      InimigoIdle_6: -1975158531
+      InimigoIdle_7: 1496665846
+      InimigoIdle_8: -838206301
+      InimigoIdle_9: -1280364066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

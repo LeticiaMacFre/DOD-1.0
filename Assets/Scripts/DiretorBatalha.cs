@@ -14,10 +14,13 @@ public class DiretorBatalha : MonoBehaviour
 
     private float distanciaPlayerVilao;
     private float distanciaAtaqueVilao = 10f;
-    private float velAtaque = 1f;
 
     public bool robAtacando = false;
-    
+    private bool gameOver = false;
+
+    private bool startBatalha = false;
+    public ZonaDeAtaque zonaAtaque;
+    public bool levantaPata = false;
     //public int danoVilao = (10,20, 30... ) maior peso pro 10, médio peso pro 20 e as vezes 30
     //o diretor sortear o valor que será o dano
     // dano = ao valor sorteado
@@ -27,6 +30,8 @@ public class DiretorBatalha : MonoBehaviour
     {
         robson = GameObject.FindGameObjectWithTag("Player").GetComponent<robsonAndando>();
         dragaoVilao = GameObject.FindGameObjectWithTag("vilao").GetComponent<BatalhaVilao>();
+        zonaAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
+
     }
 
     void FixedUptade()
@@ -38,45 +43,59 @@ public class DiretorBatalha : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distanciaPlayerVilao = Vector3.Distance(playerPosition, vilaoPosition);
+         GameOver();
 
-
-        if (distanciaPlayerVilao <= distanciaAtaqueVilao && !robAtacando)
+        if(zonaAtaque.PlayerZonaDeAtaque() && !levantaPata)
         {
-            StartCoroutine(AtaqueSoco());
+            levantaPata = true;
+            StartCoroutine("LevantaPata");
         }
-
-        if (distanciaPlayerVilao <= distanciaAtaqueVilao && Input.GetMouseButton(0))
-        {
-            StartCoroutine(AtaqueRobson());
-        }
+        
     }
 
-    IEnumerator AtaqueSoco()
+    IEnumerator LevantaPata()
     {
         dragaoVilao.AntecipaAtaque();
-        yield return new WaitForSeconds(velAtaque);
-        if(distanciaPlayerVilao <= distanciaAtaqueVilao)
-        {
-            dragaoVilao.Ataque();
-            robson.Dano();
-        }
+        yield return new WaitForSeconds(3);
+        dragaoVilao.Idle();
+        levantaPata = false;
     }
 
     IEnumerator AtaqueRobson()
     {
         robAtacando = true;
         robson.AtaqueRob();
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(6);
         dragaoVilao.DanoVilao();
         robAtacando = false;
 
     }
 
-    
-    
 
+    private void GameOver()
+    {
+        if (!robson.EstaVivo())
+        {
+            gameOver = true;
+        }
+
+        if (gameOver)
+        {
+            Time.timeScale = 0;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            startBatalha = true;
+            Debug.Log("Batala Inicia");
+            vilao.SetActive(true);
+
+        }
+    }
    
 
-    
+
 }
