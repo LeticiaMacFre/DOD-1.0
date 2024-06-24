@@ -56,7 +56,9 @@ public class DiretorBatalha : MonoBehaviour
     IEnumerator LevantaPata()
     {
         dragaoVilao.AntecipaAtaque();
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(2);
+        dragaoVilao.Ataque();
+        yield return new WaitForSeconds(1);
         dragaoVilao.Idle();
         levantaPata = false;
     }
@@ -65,7 +67,7 @@ public class DiretorBatalha : MonoBehaviour
     {
         robAtacando = true;
         robson.AtaqueRob();
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(3);
         dragaoVilao.DanoVilao();
         robAtacando = false;
 
@@ -90,7 +92,7 @@ public class DiretorBatalha : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             startBatalha = true;
-            Debug.Log("Batala Inicia");
+            Debug.Log("Batalha Inicia");
             vilao.SetActive(true);
 
         }

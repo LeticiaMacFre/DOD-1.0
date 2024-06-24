@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class robsonAndando : MonoBehaviour
     private int vidaRob = 55;
     private int dano = 15;
     private bool estaVivo = true;
+    
     
 
     // Start is called before the first frame update
@@ -65,6 +67,7 @@ public class robsonAndando : MonoBehaviour
             estaVivo = false;
         }
     }
+
 
     private void MoveAndando()
     {
@@ -140,7 +143,6 @@ public class robsonAndando : MonoBehaviour
     public void Dano()
     {
         vidaRob = vidaRob - dano;
-        animPlayer.SetLayerWeight(3, 1);
     }
 
     public void AtaqueRob()

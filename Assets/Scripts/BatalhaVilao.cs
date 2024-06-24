@@ -9,6 +9,8 @@ public class BatalhaVilao : MonoBehaviour
     private Animator animVilao;
 
     public GameObject player;
+
+    public float speed;
     
 
     // Start is called before the first frame update
@@ -45,4 +47,10 @@ public class BatalhaVilao : MonoBehaviour
         animVilao.SetLayerWeight(1, 0);
         animVilao.SetLayerWeight(2, 0);
     }
+
+   private void SeguirJogador()
+    {
+        
+    }
+
 }
