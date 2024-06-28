@@ -59,6 +59,8 @@ public class robsonAndando : MonoBehaviour
             {
                 Pulando();
             }
+
+          
            
         } 
 

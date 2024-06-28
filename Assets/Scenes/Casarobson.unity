@@ -123,6 +123,73 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &8720567
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8720568}
+  - component: {fileID: 8720570}
+  - component: {fileID: 8720569}
+  m_Layer: 0
+  m_Name: zona dano
+  m_TagString: zona de dano
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8720568
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8720567}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.197, y: 0.0088908225, z: -0.003251529}
+  m_LocalScale: {x: 0.08650023, y: 0.086690515, z: 0.086690515}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2094785154}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8720569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8720567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb86fa62070db1e47bf4228731dc96dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  robsonAtaque: 0
+--- !u!65 &8720570
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8720567}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1216278, y: 3.014862, z: 1}
+  m_Center: {x: -0.27682495, y: -1.0074311, z: 0}
 --- !u!1 &128173671
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,8 +620,9 @@ MonoBehaviour:
   player: {fileID: 909863741}
   vilao: {fileID: 2094785150}
   robAtacando: 0
-  zonaAtaque: {fileID: 1842465896}
   levantaPata: 0
+  zonaAtaque: {fileID: 1842465896}
+  zonaDano: {fileID: 0}
 --- !u!4 &212155498
 Transform:
   m_ObjectHideFlags: 0
@@ -564,7 +632,7 @@ Transform:
   m_GameObject: {fileID: 212155496}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 102.17, y: -1.6, z: -0.06277992}
+  m_LocalPosition: {x: 97.2, y: -1.6, z: -0.06277992}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4481,7 +4549,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18398666, y: -0.033219337}
+  m_Offset: {x: 1.4834213, y: -0.25920814}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4492,7 +4560,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 9.407066, y: 4.0561857}
+  m_Size: {x: 6.808197, y: 4.508163}
   m_EdgeRadius: 0
 --- !u!4 &1842465895
 Transform:
@@ -5415,7 +5483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2094785152
 Animator:
   serializedVersion: 5
@@ -5498,11 +5566,12 @@ Transform:
   m_GameObject: {fileID: 2094785150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 91.99, y: 0.19, z: 0}
+  m_LocalPosition: {x: 93.15, y: -0.04, z: 0}
   m_LocalScale: {x: 11.560663, y: 11.535286, z: 11.535286}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1842465895}
+  - {fileID: 8720568}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2094785155
@@ -5634,8 +5703,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 784db35d019701546b61ed9f855a48f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 909863741}
-  speed: 0
+  zonaDeAtaque: {fileID: 0}
+  speed: 1
+  robAtack: 0
 --- !u!1 &2113534169
 GameObject:
   m_ObjectHideFlags: 0

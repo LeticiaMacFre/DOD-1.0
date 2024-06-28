@@ -9,6 +9,7 @@ TagManager:
   - Aurelius
   - diretor
   - vilao
+  - zona de dano
   layers:
   - Default
   - TransparentFX

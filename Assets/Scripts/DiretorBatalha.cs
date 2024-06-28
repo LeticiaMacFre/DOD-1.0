@@ -19,18 +19,16 @@ public class DiretorBatalha : MonoBehaviour
     private bool gameOver = false;
 
     private bool startBatalha = false;
-    public ZonaDeAtaque zonaAtaque;
     public bool levantaPata = false;
-    //public int danoVilao = (10,20, 30... ) maior peso pro 10, médio peso pro 20 e as vezes 30
-    //o diretor sortear o valor que será o dano
-    // dano = ao valor sorteado
-    
-    // Start is called before the first frame update
+    public ZonaDeAtaque zonaAtaque;
+    public ZonaDeDano zonaDano;
+
     void Start()
     {
         robson = GameObject.FindGameObjectWithTag("Player").GetComponent<robsonAndando>();
         dragaoVilao = GameObject.FindGameObjectWithTag("vilao").GetComponent<BatalhaVilao>();
         zonaAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
+        zonaDano = GameObject.FindGameObjectWithTag("zona de dano").GetComponent<ZonaDeDano>();
 
     }
 
@@ -45,9 +43,9 @@ public class DiretorBatalha : MonoBehaviour
     {
          GameOver();
 
-        if(zonaAtaque.PlayerZonaDeAtaque() && !levantaPata)
+
+        if(zonaDano.PlayerZonaDeDano())
         {
-            levantaPata = true;
             StartCoroutine("LevantaPata");
         }
         
@@ -57,10 +55,14 @@ public class DiretorBatalha : MonoBehaviour
     {
         dragaoVilao.AntecipaAtaque();
         yield return new WaitForSeconds(2);
-        dragaoVilao.Ataque();
-        yield return new WaitForSeconds(1);
-        dragaoVilao.Idle();
-        levantaPata = false;
+        
+        //if(zonaAtaque.PlayerZonaDeAtaque())
+        //{
+            //dragaoVilao.Ataque();
+            //yield return new WaitForSeconds(1);
+            //dragaoVilao.Idle();
+        //}
+        
     }
 
     IEnumerator AtaqueRobson()

@@ -6,11 +6,14 @@ public class AureliusMove : MonoBehaviour
 {
     private GameObject robson;
     private robsonAndando robsonMove;
+    
     private Animator animAurelius;
     private SpriteRenderer spriteAurelius;
+    
     private Vector3 robPosition;
     private Vector3 posAtual;
     private Vector3 posProx;
+    
     public float offset = 2.5f;
     public float velocidade = 0.1f;
     
@@ -19,6 +22,7 @@ public class AureliusMove : MonoBehaviour
     {
         robson = GameObject.FindGameObjectWithTag("Player");
         robsonMove = robson.GetComponent<robsonAndando>();
+        
         animAurelius = GetComponent<Animator>();
         spriteAurelius = GetComponent<SpriteRenderer>();
     }

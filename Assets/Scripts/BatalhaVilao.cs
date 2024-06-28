@@ -6,24 +6,37 @@ public class BatalhaVilao : MonoBehaviour
 {
     private int vidaVilao = 150;
     private int dano;
+    
     private Animator animVilao;
 
-    public GameObject player;
+    private SpriteRenderer spriteInimigo;
+
+    public ZonaDeAtaque zonaDeAtaque;
+
+    private Transform posicaoDoJogador;
 
     public float speed;
-    
+
+    public bool robAtack = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        animVilao = GetComponent<Animator>();
-        player = GameObject.FindGameObjectWithTag("Player");
+        posicaoDoJogador = GameObject.FindGameObjectWithTag("Player").transform;
+        zonaDeAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
+        spriteInimigo = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        robAtack = zonaDeAtaque.PlayerZonaDeAtaque();
+
+        if(robAtack)
+        {
+            SeguirJogador();
+        }
     }
 
     public void AntecipaAtaque()
@@ -42,6 +55,7 @@ public class BatalhaVilao : MonoBehaviour
         animVilao.SetLayerWeight(2, 1);
     }
 
+
     public void Idle()
     {
         animVilao.SetLayerWeight(1, 0);
@@ -49,8 +63,12 @@ public class BatalhaVilao : MonoBehaviour
     }
 
    private void SeguirJogador()
-    {
-        
-    }
+   {
+        if (posicaoDoJogador.gameObject != null)
+        {
+            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,0), new Vector2(posicaoDoJogador.position.x,0), speed * Time.deltaTime);
+        }
+       
+   }
 
 }
