@@ -9,6 +9,7 @@ public class DiretorBatalha : MonoBehaviour
     public BatalhaVilao dragaoVilao;
     public GameObject player;
     public GameObject vilao;
+    public GameObject fogo;
     private Vector3 playerPosition;
     private Vector3 vilaoPosition;
 
@@ -22,6 +23,10 @@ public class DiretorBatalha : MonoBehaviour
     public bool levantaPata = false;
     public ZonaDeAtaque zonaAtaque;
     public ZonaDeDano zonaDano;
+    public AtaqueFogoInimigo bolaDeFogo;
+
+    private bool playerNaZDano = false;
+    private bool playerNaZAtaque = false;
 
     void Start()
     {
@@ -29,7 +34,8 @@ public class DiretorBatalha : MonoBehaviour
         dragaoVilao = GameObject.FindGameObjectWithTag("vilao").GetComponent<BatalhaVilao>();
         zonaAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
         zonaDano = GameObject.FindGameObjectWithTag("zona de dano").GetComponent<ZonaDeDano>();
-
+        bolaDeFogo = GameObject.Find("bola de fogo").GetComponent<AtaqueFogoInimigo>();
+       
     }
 
     void FixedUptade()
@@ -43,27 +49,21 @@ public class DiretorBatalha : MonoBehaviour
     {
          GameOver();
 
+        playerNaZAtaque = zonaAtaque.PlayerZonaDeAtaque();
+        playerNaZDano = zonaDano.PlayerZonaDeDano();
 
-        if(zonaDano.PlayerZonaDeDano())
+        if(!playerNaZAtaque && !playerNaZDano)
         {
-            StartCoroutine("LevantaPata");
+            StartCoroutine(AtaqueBolaDeFogo());
         }
-        
+        else
+        {
+            Debug.Log("Player atacando");
+            StopCoroutine(AtaqueBolaDeFogo());
+        }
     }
 
-    IEnumerator LevantaPata()
-    {
-        dragaoVilao.AntecipaAtaque();
-        yield return new WaitForSeconds(2);
-        
-        //if(zonaAtaque.PlayerZonaDeAtaque())
-        //{
-            //dragaoVilao.Ataque();
-            //yield return new WaitForSeconds(1);
-            //dragaoVilao.Idle();
-        //}
-        
-    }
+    
 
     IEnumerator AtaqueRobson()
     {
@@ -98,6 +98,13 @@ public class DiretorBatalha : MonoBehaviour
             vilao.SetActive(true);
 
         }
+    }
+
+    IEnumerator AtaqueBolaDeFogo()
+    {
+
+        bolaDeFogo.Trajetoria();
+        yield return new WaitForSeconds(8.0f);
     }
    
 
