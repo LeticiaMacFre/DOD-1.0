@@ -52,15 +52,7 @@ public class DiretorBatalha : MonoBehaviour
         playerNaZAtaque = zonaAtaque.PlayerZonaDeAtaque();
         playerNaZDano = zonaDano.PlayerZonaDeDano();
 
-        if(!playerNaZAtaque && !playerNaZDano)
-        {
-            StartCoroutine(AtaqueBolaDeFogo());
-        }
-        else
-        {
-            Debug.Log("Player atacando");
-            StopCoroutine(AtaqueBolaDeFogo());
-        }
+   
     }
 
     
@@ -100,13 +92,10 @@ public class DiretorBatalha : MonoBehaviour
         }
     }
 
-    IEnumerator AtaqueBolaDeFogo()
-    {
+    
 
-        bolaDeFogo.Trajetoria();
-        yield return new WaitForSeconds(8.0f);
-    }
-   
+  
+
 
 
 }

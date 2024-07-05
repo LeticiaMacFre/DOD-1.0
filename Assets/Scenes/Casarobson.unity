@@ -643,10 +643,12 @@ MonoBehaviour:
   dragaoVilao: {fileID: 2094785156}
   player: {fileID: 909863741}
   vilao: {fileID: 2094785150}
+  fogo: {fileID: 711564429}
   robAtacando: 0
   levantaPata: 0
   zonaAtaque: {fileID: 1842465896}
   zonaDano: {fileID: 0}
+  bolaDeFogo: {fileID: 0}
 --- !u!4 &212155498
 Transform:
   m_ObjectHideFlags: 0
@@ -2174,6 +2176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03345134d513e44ba9e9d9f80ab3b6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  posicaoDoPlayer: {fileID: 0}
 --- !u!212 &711564432
 SpriteRenderer:
   m_ObjectHideFlags: 0
