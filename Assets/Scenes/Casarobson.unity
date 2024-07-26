@@ -646,8 +646,6 @@ MonoBehaviour:
   fogo: {fileID: 711564429}
   robAtacando: 0
   levantaPata: 0
-  zonaAtaque: {fileID: 1842465896}
-  zonaDano: {fileID: 0}
   bolaDeFogo: {fileID: 0}
 --- !u!4 &212155498
 Transform:
@@ -2176,7 +2174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a03345134d513e44ba9e9d9f80ab3b6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posicaoDoPlayer: {fileID: 0}
+  speed: 0
 --- !u!212 &711564432
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4695,7 +4693,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4834213, y: -0.25920814}
+  m_Offset: {x: 2.1011086, y: -0.2592082}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4706,7 +4704,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.808197, y: 4.508163}
+  m_Size: {x: 8.043571, y: 4.508163}
   m_EdgeRadius: 0
 --- !u!4 &1842465895
 Transform:
@@ -5851,10 +5849,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zonaDeAtaque: {fileID: 0}
   zonaDeDano: {fileID: 0}
+  zonaDeDesaceleracao: {fileID: 0}
   speed: 1
   robAtack: 0
   robAtackDano: 0
   inicioAtaque: 0
+  robsonColisao: 0
 --- !u!1 &2113534169
 GameObject:
   m_ObjectHideFlags: 0

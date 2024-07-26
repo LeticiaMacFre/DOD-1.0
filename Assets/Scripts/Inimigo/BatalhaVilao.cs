@@ -15,6 +15,8 @@ public class BatalhaVilao : MonoBehaviour
 
     public ZonaDeDano zonaDeDano;
 
+    public ZonaDeDesaceleracao zonaDeDesaceleracao;
+
     private Transform posicaoDoJogador;
 
     public float speed;
@@ -22,12 +24,15 @@ public class BatalhaVilao : MonoBehaviour
     public bool robAtack = false;
     public bool robAtackDano = false;
     public bool inicioAtaque = false;
+    public bool robsonColisao = false;
     // Start is called before the first frame update
     void Start()
     {
         posicaoDoJogador = GameObject.FindGameObjectWithTag("Player").transform;
+        
         zonaDeAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
         zonaDeDano = GameObject.Find("zona dano").GetComponent<ZonaDeDano>();
+       
         spriteInimigo = GetComponent<SpriteRenderer>();
         animVilao = GetComponent<Animator>();
     }
@@ -35,19 +40,21 @@ public class BatalhaVilao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         robAtack = zonaDeAtaque.PlayerZonaDeAtaque();
         robAtackDano = zonaDeDano.PlayerZonaDeDano();
 
-        if(robAtack)
+        if(robAtack && !robAtackDano)
         {
             SeguirJogador();
         }
 
+
         if(robAtack && robAtackDano && !inicioAtaque)
         {
-           StartCoroutine(AtaquePatada()); 
+            StartCoroutine(AtaquePatada());
+            animVilao.SetLayerWeight(3, 0);
         }
+
         else
         {
             StopCoroutine(AtaquePatada());
@@ -77,6 +84,7 @@ public class BatalhaVilao : MonoBehaviour
         animVilao.SetLayerWeight(0, 1);
         animVilao.SetLayerWeight(1, 0);
         animVilao.SetLayerWeight(2, 0);
+        animVilao.SetLayerWeight(3, 0);
     }
 
    private void SeguirJogador()
@@ -84,8 +92,10 @@ public class BatalhaVilao : MonoBehaviour
         if (posicaoDoJogador.gameObject != null && !inicioAtaque)
         {
             transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,0), new Vector2(posicaoDoJogador.position.x,0), speed * Time.deltaTime);
+            animVilao.SetLayerWeight(3, 1);
+            animVilao.SetLayerWeight(0, 0);
         }
-       
+
    }
 
   
@@ -101,5 +111,7 @@ public class BatalhaVilao : MonoBehaviour
         inicioAtaque = !inicioAtaque;
 
     }
+
+    
 
 }
