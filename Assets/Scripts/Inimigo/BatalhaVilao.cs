@@ -15,8 +15,6 @@ public class BatalhaVilao : MonoBehaviour
 
     public ZonaDeDano zonaDeDano;
 
-    public ZonaDeDesaceleracao zonaDeDesaceleracao;
-
     private Transform posicaoDoJogador;
 
     public float speed;
