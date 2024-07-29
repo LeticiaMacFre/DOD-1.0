@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e15129cd571549241ae0ee5f90709ed6
+guid: f82f2c135827ac243816f5bbcb59ec0b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 400
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 400x400bola de fogo_0
+      name: 400x229 andandovilao_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 816ce9839e30fbd468732e23d457ee28
-      internalID: -2048564718
+      spriteID: d6b29e6acdd01fb409ebbcc2db5dd2a6
+      internalID: -1024206352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_1
+      name: 400x229 andandovilao_1
       rect:
         serializedVersion: 2
         x: 400
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1dc7dbc9d55a32147856fac6a862e56a
-      internalID: -1875847407
+      spriteID: e4ce6fb08d9f5274bb717ff220f22bfa
+      internalID: 600671627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_2
+      name: 400x229 andandovilao_2
       rect:
         serializedVersion: 2
         x: 800
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b29a364aa145bed41a75fb4c93affc4d
-      internalID: 1397496553
+      spriteID: 3b1d476e9d5eb8e4d83366ca74621fab
+      internalID: -1983813384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_3
+      name: 400x229 andandovilao_3
       rect:
         serializedVersion: 2
         x: 1200
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8d477d76f34dca4cb073a28fd51fb6a
-      internalID: -31418073
+      spriteID: 100b663c395d5824da89757b33f6873f
+      internalID: 834108316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_4
+      name: 400x229 andandovilao_4
       rect:
         serializedVersion: 2
         x: 1600
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc39de13a18395b40b1a9b8b89ddd006
-      internalID: -993358557
+      spriteID: f87d7fe8d1d0b5f40b3d71c50308ae1a
+      internalID: 1683947342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_5
+      name: 400x229 andandovilao_5
       rect:
         serializedVersion: 2
         x: 2000
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 013878a2520b0224fa2416fb3d3d17be
-      internalID: 1793920533
+      spriteID: 596ce1ad86c1fdf40ba11e6991e30baf
+      internalID: -670786424
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_6
+      name: 400x229 andandovilao_6
       rect:
         serializedVersion: 2
         x: 2400
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e02d1546a3b174443b3075384a0424d9
-      internalID: -934206009
+      spriteID: 1e63601bfad0be949aad299e63d27d3f
+      internalID: 30763745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_7
+      name: 400x229 andandovilao_7
       rect:
         serializedVersion: 2
         x: 2800
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54d0a9750cda4bf4990653eff3953f40
-      internalID: 641737211
+      spriteID: 0b49bf24a49286f45b0964c75413fe81
+      internalID: 726890718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_8
+      name: 400x229 andandovilao_8
       rect:
         serializedVersion: 2
         x: 3200
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -305,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9ebc626b5a2ed045b1b89d729670cca
-      internalID: 784864142
+      spriteID: e11ee37316c8b854688d7851be1679bc
+      internalID: 530660338
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 400x400bola de fogo_9
+      name: 400x229 andandovilao_9
       rect:
         serializedVersion: 2
         x: 3600
         y: 0
         width: 400
-        height: 400
+        height: 228
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -326,8 +326,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 596fb7e8fb6f3444db3b8a15b0a313c9
-      internalID: 1746029284
+      spriteID: cdf5b8e4e8417b14499b4535ef5721bf
+      internalID: -1036040664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 400x229 andandovilao_10
+      rect:
+        serializedVersion: 2
+        x: 4000
+        y: 0
+        width: 400
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a03cdfa1dcfa9f4ba025304012c13ec
+      internalID: 625598763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 400x229 andandovilao_11
+      rect:
+        serializedVersion: 2
+        x: 4400
+        y: 0
+        width: 400
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984b7f7dada8abd4e89914618c7d1adb
+      internalID: -1479706559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 400x229 andandovilao_12
+      rect:
+        serializedVersion: 2
+        x: 4800
+        y: 0
+        width: 400
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b98192201749f349bec8d8306850925
+      internalID: 72033295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 400x229 andandovilao_13
+      rect:
+        serializedVersion: 2
+        x: 5200
+        y: 0
+        width: 400
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423cfea3d9e1a0b4ca48f423be47abfc
+      internalID: 912403118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 400x229 andandovilao_14
+      rect:
+        serializedVersion: 2
+        x: 5600
+        y: 0
+        width: 400
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eccf5c95a77aea4581da8220db79dfd
+      internalID: -1611004018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 400x229 andandovilao_15
+      rect:
+        serializedVersion: 2
+        x: 6000
+        y: 0
+        width: 400
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93874b48469f0d48a2633b59cd8b66c
+      internalID: -1773180667
       vertices: []
       indices: 
       edges: []
@@ -343,16 +469,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      400x400bola de fogo_0: -2048564718
-      400x400bola de fogo_1: -1875847407
-      400x400bola de fogo_2: 1397496553
-      400x400bola de fogo_3: -31418073
-      400x400bola de fogo_4: -993358557
-      400x400bola de fogo_5: 1793920533
-      400x400bola de fogo_6: -934206009
-      400x400bola de fogo_7: 641737211
-      400x400bola de fogo_8: 784864142
-      400x400bola de fogo_9: 1746029284
+      400x229 andandovilao_0: -1024206352
+      400x229 andandovilao_1: 600671627
+      400x229 andandovilao_10: 625598763
+      400x229 andandovilao_11: -1479706559
+      400x229 andandovilao_12: 72033295
+      400x229 andandovilao_13: 912403118
+      400x229 andandovilao_14: -1611004018
+      400x229 andandovilao_15: -1773180667
+      400x229 andandovilao_2: -1983813384
+      400x229 andandovilao_3: 834108316
+      400x229 andandovilao_4: 1683947342
+      400x229 andandovilao_5: -670786424
+      400x229 andandovilao_6: 30763745
+      400x229 andandovilao_7: 726890718
+      400x229 andandovilao_8: 530660338
+      400x229 andandovilao_9: -1036040664
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

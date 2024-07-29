@@ -6,23 +6,28 @@ using UnityEngine;
 
 public class robsonAndando : MonoBehaviour
 {
+
     private Rigidbody2D rigAndando;
     private Animator animPlayer;
     private SpriteRenderer sprite;
+    
     private AudioSource audio;
-    private Vector3 movement;
+    public AudioClip jump;
+    
     public float JumpForce = 5.0f;
     public float speedAndando;
-    private bool isJumping;
-    private bool cinematic = false;
     private float moveH;
+
+    private Vector3 movement;
+
     private string nomeObjetoTrigger;
-    public AudioClip jump;
+    
     private int vidaRob = 55;
     private int dano = 15;
+    
     private bool estaVivo = true;
-    
-    
+    private bool isJumping;
+    private bool cinematic = false;
 
     // Start is called before the first frame update
     void Start()
