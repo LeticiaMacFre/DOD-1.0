@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floresta2.unity
     guid: 97483233a2f68154b80fdfd6ee01448b
+  - enabled: 1
+    path: Assets/Scenes/Casarobson.unity
+    guid: ca8f0de136ec60148a382d7e34cb0884
+  - enabled: 1
+    path: Assets/Scenes/Casadentro.unity
+    guid: 5633e32c8df3e5f45b3d9ae04d5a8403
   m_configObjects: {}

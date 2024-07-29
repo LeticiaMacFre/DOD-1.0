@@ -747,11 +747,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: DOD 1.0
   metroPackageVersion: 
-  metroCertificatePath: 
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: Nation4
+  metroCertificateIssuer: Nation4
+  metroCertificateNotAfter: 00ba70770bf2db01
   metroApplicationDescription: DOD 1.0
   wsaImages: {}
   metroTileShortName: 
