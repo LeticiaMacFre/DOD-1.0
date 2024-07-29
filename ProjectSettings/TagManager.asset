@@ -8,11 +8,12 @@ TagManager:
   - Sound
   - Aurelius
   - diretor
+  - Inimigo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - inimigo
   - Water
   - UI
   - 

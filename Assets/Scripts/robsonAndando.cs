@@ -17,9 +17,9 @@ public class robsonAndando : MonoBehaviour
     private float moveH;
     private string nomeObjetoTrigger;
     public AudioClip jump;
-    private int vidaRob = 55;
-    private int dano = 15;
-    
+    private int vidaRob = 50;
+    private int dano = 20;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class robsonAndando : MonoBehaviour
 
     private void Update()
     {
-        if(!cinematic)
+        if (!cinematic)
         {
 
             if (Input.GetKey(KeyCode.A))
@@ -51,12 +51,12 @@ public class robsonAndando : MonoBehaviour
             {
                 animPlayer.SetLayerWeight(1, 0);
             }
-            
-            if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
+
+            if (Input.GetKeyDown(KeyCode.Space) && !isJumping)
             {
                 Pulando();
             }
-           
+
         }
     }
 
@@ -87,16 +87,16 @@ public class robsonAndando : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "ovo")
+        if (collision.gameObject.name == "ovo")
         {
             nomeObjetoTrigger = collision.gameObject.name;
         }
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "ovo")
+        if (collision.gameObject.name == "ovo")
         {
             nomeObjetoTrigger = "";
         }
@@ -126,7 +126,7 @@ public class robsonAndando : MonoBehaviour
         }
         else
         {
-            Debug.Log("parado");    
+            Debug.Log("parado");
             return "parado";
         }
     }
@@ -142,4 +142,3 @@ public class robsonAndando : MonoBehaviour
         animPlayer.SetLayerWeight(4, 1);
     }
 }
-    
