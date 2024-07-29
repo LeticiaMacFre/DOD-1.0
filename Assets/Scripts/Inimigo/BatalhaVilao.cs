@@ -22,7 +22,6 @@ public class BatalhaVilao : MonoBehaviour
     public bool robAtack = false;
     public bool robAtackDano = false;
     public bool inicioAtaque = false;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -89,7 +88,7 @@ public class BatalhaVilao : MonoBehaviour
        
    }
 
-
+  
     IEnumerator AtaquePatada()
     {
         inicioAtaque = !inicioAtaque;

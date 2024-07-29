@@ -719,6 +719,7 @@ MonoBehaviour:
   player: {fileID: 909863741}
   vilao: {fileID: 2094785150}
   fogo: {fileID: 0}
+  fogo: {fileID: 711564429}
   robAtacando: 0
   levantaPata: 0
   zonaAtaque: {fileID: 1842465896}
