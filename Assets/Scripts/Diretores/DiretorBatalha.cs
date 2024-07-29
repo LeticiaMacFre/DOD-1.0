@@ -21,19 +21,16 @@ public class DiretorBatalha : MonoBehaviour
 
     private bool startBatalha = false;
     public bool levantaPata = false;
-    public ZonaDeAtaque zonaAtaque;
-    public ZonaDeDano zonaDano;
+ 
     public AtaqueFogoInimigo bolaDeFogo;
 
-    private bool playerNaZDano = false;
-    private bool playerNaZAtaque = false;
+ 
 
     void Start()
     {
         robson = GameObject.FindGameObjectWithTag("Player").GetComponent<robsonAndando>();
         dragaoVilao = GameObject.FindGameObjectWithTag("vilao").GetComponent<BatalhaVilao>();
-        zonaAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
-        zonaDano = GameObject.FindGameObjectWithTag("zona de dano").GetComponent<ZonaDeDano>();
+
         bolaDeFogo = GameObject.Find("bola de fogo").GetComponent<AtaqueFogoInimigo>();
        
     }
@@ -48,11 +45,6 @@ public class DiretorBatalha : MonoBehaviour
     void Update()
     {
          GameOver();
-
-        playerNaZAtaque = zonaAtaque.PlayerZonaDeAtaque();
-        playerNaZDano = zonaDano.PlayerZonaDeDano();
-
-   
     }
 
     
@@ -64,7 +56,6 @@ public class DiretorBatalha : MonoBehaviour
         yield return new WaitForSeconds(3);
         dragaoVilao.DanoVilao();
         robAtacando = false;
-
     }
 
 
@@ -91,6 +82,8 @@ public class DiretorBatalha : MonoBehaviour
 
         }
     }
+
+    
 
     
 
