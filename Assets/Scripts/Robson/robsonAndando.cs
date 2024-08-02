@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class robsonAndando : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class robsonAndando : MonoBehaviour
     
     private AudioSource audio;
     public AudioClip jump;
+
+    public Button esqButton;
+    public Button dirButton;
+    public Button jumpButton;
     
     public float JumpForce = 5.0f;
     public float speedAndando;
@@ -40,27 +45,19 @@ public class robsonAndando : MonoBehaviour
 
     private void Update()
     {
-        if(!cinematic)
+        if (!cinematic)
         {
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
-                animPlayer.SetLayerWeight(1, 1);
-                sprite.flipX = true;
                 MoveAndando();
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
-                animPlayer.SetLayerWeight(1, 1);
-                sprite.flipX = false;
                 MoveAndando();
-            }
-            else
-            {
-                animPlayer.SetLayerWeight(1, 0);
             }
             
-            if(Input.GetKeyDown(KeyCode.Space) && !isJumping)
+            if(Input.GetKeyDown(KeyCode.Space))
             {
                 Pulando();
             }
@@ -75,21 +72,38 @@ public class robsonAndando : MonoBehaviour
         }
     }
 
-
     private void MoveAndando()
     {
         moveH = Input.GetAxis("Horizontal");
         movement = new Vector3(moveH * Time.deltaTime * speedAndando, 0f, 0f);
         transform.position += movement;
+        if(moveH < 0)
+        {
+            animPlayer.SetLayerWeight(1, 1);
+            sprite.flipX = true;
+        }
+        else if(moveH > 0)
+        {
+            animPlayer.SetLayerWeight(1, 1);
+            sprite.flipX = false;
+        }
+        else
+        {
+            animPlayer.SetLayerWeight(1, 0);
+        }
     }
 
     private void Pulando()
     {
-        rigAndando.AddForce(transform.up * JumpForce, ForceMode2D.Impulse);
-        animPlayer.SetLayerWeight(2, 1);
-        audio.clip = jump;
-        audio.Play();
-        isJumping = true;
+        if(!isJumping)
+        {
+            rigAndando.AddForce(transform.up * JumpForce, ForceMode2D.Impulse);
+            animPlayer.SetLayerWeight(2, 1);
+            audio.clip = jump;
+            audio.Play();
+            isJumping = true;
+        }
+        
     }
 
     void OnCollisionEnter2D(Collision2D collisor)
@@ -103,16 +117,16 @@ public class robsonAndando : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "ovo")
+        if (collision.gameObject.name == "ovo")
         {
             nomeObjetoTrigger = collision.gameObject.name;
         }
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "ovo")
+        if (collision.gameObject.name == "ovo")
         {
             nomeObjetoTrigger = "";
         }
@@ -142,7 +156,7 @@ public class robsonAndando : MonoBehaviour
         }
         else
         {
-            Debug.Log("parado");    
+            Debug.Log("parado");
             return "parado";
         }
     }
@@ -161,5 +175,19 @@ public class robsonAndando : MonoBehaviour
     {
         return estaVivo;
     }
+
+    public void AndaEsquerda()
+    {
+        moveH = -1;
+    }
+
+    public void AndaDireita()
+    {
+        moveH = 1;
+    }
+
+    public void Pulo()
+    {
+        Pulando();
+    }
 }
-    
