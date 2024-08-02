@@ -45,7 +45,7 @@ public class robsonAndando : MonoBehaviour
 
     private void Update()
     {
-        if(!cinematic)
+        if (!cinematic)
         {
 
             if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
@@ -117,16 +117,16 @@ public class robsonAndando : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "ovo")
+        if (collision.gameObject.name == "ovo")
         {
             nomeObjetoTrigger = collision.gameObject.name;
         }
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "ovo")
+        if (collision.gameObject.name == "ovo")
         {
             nomeObjetoTrigger = "";
         }
@@ -156,7 +156,7 @@ public class robsonAndando : MonoBehaviour
         }
         else
         {
-            Debug.Log("parado");    
+            Debug.Log("parado");
             return "parado";
         }
     }
@@ -191,4 +191,3 @@ public class robsonAndando : MonoBehaviour
         Pulando();
     }
 }
-    
