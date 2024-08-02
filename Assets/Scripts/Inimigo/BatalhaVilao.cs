@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BatalhaVilao : MonoBehaviour
-{
+{ 
     private int vidaVilao = 150;
     private int dano;
     

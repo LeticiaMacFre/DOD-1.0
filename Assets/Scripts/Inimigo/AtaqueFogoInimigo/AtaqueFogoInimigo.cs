@@ -4,49 +4,67 @@ using UnityEngine;
 
 public class AtaqueFogoInimigo : MonoBehaviour
 {
-    [SerializeField] private float speed;
-    private bool hit;
-    private float direction;
+    //Attack Parameters
+    [SerializeField] private float attackCooldown;
+    [SerializeField] private float range;
+    [SerializeField] private int damage;
 
-    private BoxCollider2D boxCollider;
+    //Ranged Attack
+    [SerializeField] private Transform firepoint;
+    [SerializeField] private GameObject[] fireballs;
+
+    //Collider Parameters
+    [SerializeField] private float colliderDistance;
+    [SerializeField] private BoxCollider2D boxCollider;
+
+    //Player Layer
+    [SerializeField] private LayerMask playerLayer;
+    private float cooldownTimer = Mathf.Infinity;
+
+
+    public ZonaDeAtaque zonaDeAtaque;
+    public ZonaDeDano zonaDeDano;
+
+    public bool playerNaZD = false;
+    public bool playerNaZA = false;
+
+    //References
     private Animator anim;
+
+    private void Start()
+    {
+        zonaDeAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
+        zonaDeDano = GameObject.Find("zona ataque").GetComponent<ZonaDeDano>();
+    }
+
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    private void Uptade()
+    private void Update()
     {
-        if (hit) return;
-        float movementSpeed = speed * Time.deltaTime * direction;
-        transform.Translate(movementSpeed, 0, 0);
+        playerNaZA = zonaDeAtaque.PlayerZonaDeAtaque();
+        playerNaZD = zonaDeDano.PlayerZonaDeDano();
+
+        cooldownTimer += Time.deltaTime;
+
+        if (!playerNaZA && !playerNaZD)
+        {
+            if (cooldownTimer >= attackCooldown)
+            {
+                cooldownTimer = 0;
+                anim.SetTrigger("ataqueBolaDeFogo");
+            }
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    //RangedAttack()
+    private void AtaqueBolaDeFogoVilao()
     {
-        hit = true;
-        boxCollider.enabled = false;
-        anim.SetLayerWeight(1, 1);
-    }
-
-    public void SetDirection(float _direction)
-    {
-        direction = _direction;
-        gameObject.SetActive(true);
-        hit = false;
-        boxCollider.enabled = true;
-
-        float localScaleX = transform.localScale.x;
-        if(Mathf.Sign(localScaleX) != _direction)
-            localScaleX = -localScaleX;
-
-        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
-    }
-
-    private void Deactivate()
-    {
-        gameObject.SetActive(false);
+        cooldownTimer = 0;
+        fireballs[0].transform.position = firepoint.position;
+        //fireballs[0].GetComponent<EnemyProjectile>().ActivateProjectile();
     }
 }
