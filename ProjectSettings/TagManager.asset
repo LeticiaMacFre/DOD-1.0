@@ -8,7 +8,9 @@ TagManager:
   - Sound
   - Aurelius
   - diretor
-  - Inimigo
+  - vilao
+  - zona de dano
+  - zona de desaceleracao
   layers:
   - Default
   - TransparentFX
