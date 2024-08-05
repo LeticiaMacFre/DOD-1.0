@@ -52,7 +52,7 @@ public class DiretorBatalha : MonoBehaviour
     IEnumerator AtaqueRobson()
     {
         robAtacando = true;
-        robson.AtaqueRob();
+        //robson.AtaqueRob();
         yield return new WaitForSeconds(3);
         dragaoVilao.DanoVilao();
         robAtacando = false;

@@ -90,6 +90,7 @@ public class robsonAndando : MonoBehaviour
         else
         {
             animPlayer.SetLayerWeight(1, 0);
+            animPlayer.SetLayerWeight(0, 1);
         }
     }
 
@@ -166,10 +167,10 @@ public class robsonAndando : MonoBehaviour
         vidaRob = vidaRob - dano;
     }
 
-    public void AtaqueRob()
-    {
-        animPlayer.SetLayerWeight(4, 1);
-    }
+    //public void AtaqueRob()
+    //{
+    //    animPlayer.SetLayerWeight(4, 1);
+    //}
 
     public bool EstaVivo()
     {
