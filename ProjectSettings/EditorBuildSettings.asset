@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Casarobson.unity
     guid: ca8f0de136ec60148a382d7e34cb0884
+  - enabled: 1
+    path: Assets/Scenes/Casarobson 1.unity
+    guid: a10fc466d3174a14e85e2c4399139fb2
+  - enabled: 1
+    path: Assets/Scenes/Casarobson dentro.unity
+    guid: e3e01179515bc254388420253ce807a9
   m_configObjects: {}
