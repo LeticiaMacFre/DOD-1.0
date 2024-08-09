@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5785156673357105801}
   - component: {fileID: 8655984872661214478}
   - component: {fileID: 2021064927127736563}
-  - component: {fileID: 145744616394399888}
   m_Layer: 7
   m_Name: Robson
   m_TagString: Player
@@ -195,9 +194,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5601fa05420b345910699ccfddce4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump: {fileID: 8300000, guid: 4b60cbe1413e47945b0504786e30e83c, type: 3}
+  esqButton: {fileID: 0}
+  dirButton: {fileID: 0}
+  jumpButton: {fileID: 0}
   JumpForce: 5.5
   speedAndando: 7
-  jump: {fileID: 8300000, guid: 4b60cbe1413e47945b0504786e30e83c, type: 3}
 --- !u!82 &2021064927127736563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -294,17 +296,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &145744616394399888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8150864766303249195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 060798f5348081044af26db4417f788e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pontoAtaque: {fileID: 0}
-  raioAtaque: 0.6

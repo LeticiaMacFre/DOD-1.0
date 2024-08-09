@@ -5,16 +5,19 @@ using UnityEngine;
 public class AtaqueJogador : MonoBehaviour
 {
     [SerializeField]
-    private Transform pontoAtaque;
+    private Transform pontoAtaqueDireita;
+
+    [SerializeField]
+    private Transform pontoAtaqueEsquerda;
 
     [SerializeField]
     private float raioAtaque;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private LayerMask LayersAtaque;
+
+    [SerializeField]
+    private robsonAndando Robson;
 
     // Update is called once per frame
     void Update()
@@ -26,13 +29,22 @@ public class AtaqueJogador : MonoBehaviour
     }
 
     private void OnDrawGizmos() {
-        if (this.pontoAtaque != null) {
-            Gizmos.DrawWireSphere(this.pontoAtaque.position, this.raioAtaque);
+        if (this.pontoAtaqueDireita != null) {
+            Gizmos.DrawWireSphere(this.pontoAtaqueDireita.position, this.raioAtaque);
+        }
+        if (this.pontoAtaqueDireita != null) {
+            Gizmos.DrawWireSphere(this.pontoAtaqueEsquerda.position, this.raioAtaque);
         }
     }
 
     private void Atacar() {
-        Collider2D colliderInimigo = Physics2D.OverlapCircle(this.pontoAtaque.position, this.raioAtaque);
+        Transform pontoAtaque;
+        if (this.Robson.direcaoMovimento == DirecaoMovimento.Direita){
+            pontoAtaque = this.pontoAtaqueDireita;
+        } else {
+            pontoAtaque = this.pontoAtaqueEsquerda;
+        }
+        Collider2D colliderInimigo = Physics2D.OverlapCircle(pontoAtaque.position, this.raioAtaque, this.LayersAtaque);
         if (colliderInimigo != null){
 
             Debug.Log("Atacando objeto" +  colliderInimigo.name);
@@ -44,4 +56,5 @@ public class AtaqueJogador : MonoBehaviour
             }
         }
     }
-}
+}                                                                                   
+    

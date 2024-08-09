@@ -11,6 +11,7 @@ TagManager:
   - vilao
   - zona de dano
   - zona de desaceleracao
+  - Inimigo
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - inimigo
   - Water
   - UI
-  - 
+  - Inimigo
   - 
   - 
   - player
