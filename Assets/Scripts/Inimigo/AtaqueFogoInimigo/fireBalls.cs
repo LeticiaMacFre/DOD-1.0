@@ -11,10 +11,12 @@ public class fireBalls : MonoBehaviour
     public int hit;
     private GameObject player;
     private Vector3 target;
+    public float tempo = 1.2f;
+
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("player");
+        player = GameObject.FindGameObjectWithTag("Player");
         target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
         // o código está indicando passo a passo como encontrar os três valores numéricos. 
     }
@@ -29,6 +31,11 @@ public class fireBalls : MonoBehaviour
     public void FollowPlayer()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+
+        if(transform.position == target)
+        {
+            StartCoroutine("Contador");
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,7 +50,7 @@ public class fireBalls : MonoBehaviour
 
     IEnumerator Contador()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(tempo);
         Destroy(this.gameObject);
     }
 
