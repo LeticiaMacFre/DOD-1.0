@@ -39,7 +39,8 @@ public class AtaqueJogador : MonoBehaviour
 
     private void Atacar() {
         Transform pontoAtaque;
-        if (this.Robson.direcaoMovimento == DirecaoMovimento.Direita){
+        if (this.Robson.direcaoMovimento == DirecaoMovimento.Direita)
+        {
             pontoAtaque = this.pontoAtaqueDireita;
         } else {
             pontoAtaque = this.pontoAtaqueEsquerda;
