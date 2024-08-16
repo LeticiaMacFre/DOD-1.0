@@ -10,14 +10,18 @@ public class fireBalls : MonoBehaviour
     public float speed;
     public int hit;
     private GameObject player;
+    private Animator animBF;
     private Vector3 target;
-    public float tempo = 1.2f;
+    public float tempo = 1.1f;
+
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         target = new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+
+        animBF = GetComponent<Animator>();
         // o código está indicando passo a passo como encontrar os três valores numéricos. 
     }
 
@@ -48,9 +52,12 @@ public class fireBalls : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+
     IEnumerator Contador()
     {
         yield return new WaitForSeconds(tempo);
+        animBF.SetLayerWeight(1, 1);
+        yield return new WaitForSeconds(0.5f);
         Destroy(this.gameObject);
     }
 

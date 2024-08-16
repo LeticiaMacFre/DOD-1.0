@@ -52,11 +52,18 @@ public class robsonAndando : MonoBehaviour
             {
                 MoveAndando();
             }
+            
+         
             else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
                 MoveAndando();
             }
             
+            else
+            {
+                animPlayer.SetLayerWeight(1, 0);
+            }
+
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 Pulando();
@@ -87,11 +94,7 @@ public class robsonAndando : MonoBehaviour
             animPlayer.SetLayerWeight(1, 1);
             sprite.flipX = false;
         }
-        else
-        {
-            animPlayer.SetLayerWeight(1, 0);
-            animPlayer.SetLayerWeight(0, 1);
-        }
+        
     }
 
     private void Pulando()

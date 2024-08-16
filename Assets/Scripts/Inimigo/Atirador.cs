@@ -9,7 +9,8 @@ public class Atirador : MonoBehaviour
     public GameObject mira;
     private bool areaAtaque;
     private bool atirando;
-    public Batalha batalha;
+    
+    public Batalha batalha
 
     // Start is called before the first frame update
     void Start()
@@ -24,20 +25,22 @@ public class Atirador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(batalha.VerificaSeBatalhaIniciou())
+        if (startFireB)
         {
-            if (areaAtaque && atirando)
+            if (batalha.VerificaSeBatalhaIniciou())
             {
-                StopCoroutine("Atira");
-                atirando = false;
-            }
-            else if (!areaAtaque && !atirando)
-            {
-                StartCoroutine("Atira");
-                atirando = true;
+                if (areaAtaque && atirando)
+                {
+                    StopCoroutine("Atira");
+                    atirando = false;
+                }
+                else if (!areaAtaque && !atirando)
+                {
+                    StartCoroutine("Atira");
+                    atirando = true;
+                }
             }
         }
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -68,7 +71,7 @@ public class Atirador : MonoBehaviour
         do
         {
             Fire();
-            yield return new WaitForSeconds(Random.Range(1, 3));
+            yield return new WaitForSeconds(5F);
         } while (atirando);
 
     }
