@@ -5,7 +5,7 @@ using UnityEngine;
 public class Robson : MonoBehaviour
 {
     [SerializeField]
-    private Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
 
     [SerializeField]
     private float velociadeMovimento;
