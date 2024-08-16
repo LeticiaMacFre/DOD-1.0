@@ -9,8 +9,9 @@ public class Atirador : MonoBehaviour
     public GameObject mira;
     private bool areaAtaque;
     private bool atirando;
-    
-    public Batalha batalha
+
+    public StartFireBalls startFB;
+    private bool startFireAttack;
 
     // Start is called before the first frame update
     void Start()
@@ -19,16 +20,16 @@ public class Atirador : MonoBehaviour
         areaAtaque = false;
         atirando = true;
         StartCoroutine("Atira");
-        batalha = GameObject.FindGameObjectWithTag("Batalha").GetComponent<Batalha>();
+        startFB = GameObject.Find("Inicio").GetComponent<StartFireBalls>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (startFireB)
+        startFireAttack = startFB.VerifyStartFireballs();
+
+        if (startFireAttack)
         {
-            if (batalha.VerificaSeBatalhaIniciou())
-            {
                 if (areaAtaque && atirando)
                 {
                     StopCoroutine("Atira");
@@ -39,7 +40,6 @@ public class Atirador : MonoBehaviour
                     StartCoroutine("Atira");
                     atirando = true;
                 }
-            }
         }
     }
 
