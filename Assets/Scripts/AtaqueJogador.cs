@@ -22,17 +22,21 @@ public class AtaqueJogador : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos() {
-        if (this.pontoAtaque != null) {
+    private void OnDrawGizmos()
+    {
+        if (this.pontoAtaque != null)
+        {
             Gizmos.DrawWireSphere(this.pontoAtaque.position, this.raioAtaque);
         }
     }
 
-    private void Atacar() {
+    private void Atacar()
+    {
         Collider2D colliderInimigo = Physics2D.OverlapCircle(this.pontoAtaque.position, this.raioAtaque, this.LayersAtaque);
         if (colliderInimigo != null)
         {
-            Debug.Log("Atacando objeto" +  colliderInimigo.name);
+
+            Debug.Log("Atacando objeto" + colliderInimigo.name);
 
             // Causar dano a um inimigo
             Inimigo inimigo = colliderInimigo.GetComponent<Inimigo>();

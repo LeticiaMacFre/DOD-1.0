@@ -10,6 +10,7 @@ public class DiretorBatalha : MonoBehaviour
     public GameObject player;
     public GameObject vilao;
     public GameObject fogo;
+
     private Vector3 playerPosition;
     private Vector3 vilaoPosition;
 
@@ -22,7 +23,6 @@ public class DiretorBatalha : MonoBehaviour
     private bool startBatalha = false;
     public bool levantaPata = false;
  
-    public AtaqueFogoInimigo bolaDeFogo;
 
  
 
@@ -31,8 +31,6 @@ public class DiretorBatalha : MonoBehaviour
         robson = GameObject.FindGameObjectWithTag("Player").GetComponent<robsonAndando>();
         dragaoVilao = GameObject.FindGameObjectWithTag("vilao").GetComponent<BatalhaVilao>();
 
-        bolaDeFogo = GameObject.Find("bola de fogo").GetComponent<AtaqueFogoInimigo>();
-       
     }
 
     void FixedUptade()

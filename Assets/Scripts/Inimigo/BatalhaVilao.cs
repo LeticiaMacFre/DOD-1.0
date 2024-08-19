@@ -23,6 +23,7 @@ public class BatalhaVilao : MonoBehaviour
     public bool robAtackDano = false;
     public bool inicioAtaque = false;
     public bool robsonColisao = false;
+    
     // Start is called before the first frame update
     void Start()
     {

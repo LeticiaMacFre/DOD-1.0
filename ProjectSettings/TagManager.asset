@@ -12,6 +12,9 @@ TagManager:
   - zona de dano
   - zona de desaceleracao
   - Inimigo
+  - zona de ataque
+  - Batalha
+  - Tree
   layers:
   - Default
   - TransparentFX
