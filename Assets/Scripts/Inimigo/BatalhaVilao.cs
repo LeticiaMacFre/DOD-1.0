@@ -58,6 +58,11 @@ public class BatalhaVilao : MonoBehaviour
         {
             StopCoroutine(AtaquePatada());
         }
+
+        if(!robAtack)
+        {
+            animVilao.SetLayerWeight(3, 0);
+        }
     }
 
     public void AntecipaAtaque()
@@ -92,9 +97,9 @@ public class BatalhaVilao : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(new Vector2(transform.position.x,0), new Vector2(posicaoDoJogador.position.x,0), speed * Time.deltaTime);
             animVilao.SetLayerWeight(3, 1);
-            animVilao.SetLayerWeight(0, 0);
         }
 
+       
    }
 
   
