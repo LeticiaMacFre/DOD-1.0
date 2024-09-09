@@ -5,7 +5,7 @@ using UnityEngine;
 public class BatalhaVilao : MonoBehaviour
 { 
     private int vidaVilao = 150;
-    private int dano;
+    private int dano = 30;
     
     private Animator animVilao;
 
@@ -63,6 +63,8 @@ public class BatalhaVilao : MonoBehaviour
         {
             animVilao.SetLayerWeight(3, 0);
         }
+
+       
     }
 
     public void AntecipaAtaque()

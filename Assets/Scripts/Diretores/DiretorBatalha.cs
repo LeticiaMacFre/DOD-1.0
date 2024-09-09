@@ -45,17 +45,6 @@ public class DiretorBatalha : MonoBehaviour
          GameOver();
     }
 
-    
-
-    IEnumerator AtaqueRobson()
-    {
-        robAtacando = true;
-        //robson.AtaqueRob();
-        yield return new WaitForSeconds(3);
-        dragaoVilao.DanoVilao();
-        robAtacando = false;
-    }
-
 
     private void GameOver()
     {
