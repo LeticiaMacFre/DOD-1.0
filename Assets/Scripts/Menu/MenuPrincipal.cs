@@ -48,7 +48,7 @@ public class MenuPrincipal : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("OneScene");
+        SceneManager.LoadScene("Casarobson");
         Cursor.visible = !cursorStatus;
         Destroy(sound);
     }
