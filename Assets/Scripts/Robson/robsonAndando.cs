@@ -112,7 +112,7 @@ public class robsonAndando : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collisor)
     {
-        if (collisor.gameObject.CompareTag("ground"))
+        if (collisor.gameObject.CompareTag("ground") || collisor.gameObject.CompareTag("Pedra"))
         {
             isJumping = false;
             animPlayer.SetLayerWeight(2, 0);
@@ -124,6 +124,12 @@ public class robsonAndando : MonoBehaviour
         if (collision.gameObject.name == "ovo")
         {
             nomeObjetoTrigger = collision.gameObject.name;
+        }
+
+        if (collision.gameObject.CompareTag("Trigger"))
+        {
+            Debug.Log("TEste");
+            collision.gameObject.GetComponent<Rigidbody2D>().simulated = true;
         }
 
     }

@@ -16,6 +16,7 @@ public class DiretorCavernaOvo : MonoBehaviour
     public AudioClip caveLoop;
     public bool startAnimation = false;
     public float tempoCena = 7.0f;
+    private bool cenaFulga;
 
     // Start is called before the first frame update
     void Start()
