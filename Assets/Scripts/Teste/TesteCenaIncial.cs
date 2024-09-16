@@ -34,8 +34,5 @@ public class TesteCenaIncial : MonoBehaviour
            
     }
 
-    IEnumerator CenaUm()
-    {
-     
-    }
+    
 }
