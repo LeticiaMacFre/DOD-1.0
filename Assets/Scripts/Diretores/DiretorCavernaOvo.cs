@@ -48,7 +48,7 @@ public class DiretorCavernaOvo : MonoBehaviour
         yield return new WaitForSeconds(tempoCena);
         ovo.SetActive(false);
         dragao.SetActive(true);
-        dragao.GetComponent<AureliusMove>().enabled = true;
+        dragao.GetComponent<AureluisAI>().enabled = true;
         robson.Cinematic();
         robsonAnim.SetLayerWeight(3, 0);
         saida.SetActive(true);
