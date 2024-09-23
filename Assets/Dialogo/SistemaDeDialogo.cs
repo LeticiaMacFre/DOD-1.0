@@ -7,24 +7,27 @@ using UnityEngine.UI;
 
 public class SistemaDeDialogo : MonoBehaviour
 {
-    [SerializeField] private GameObject _caixaDeDialogo;
+    [SerializeField] public GameObject caixaDeDialogo;
 
-    [SerializeField] private AudioClip _somDaExpressao;
-    [SerializeField] private TextMeshProUGUI _nomePersonagem;
-    [SerializeField] private TextMeshProUGUI _textoFala;
+    [SerializeField] public AudioClip somDaExpressao;
+    [SerializeField] public TextMeshProUGUI nomePersonagem;
+    [SerializeField] public TextMeshProUGUI textoFala;
 
-    private Dialogo _dialogoAtual;
-    private int _indiceFalas;
-    private Queue<string> _filaFalas;
+    private Dialogo dialogoAtual;
+    private Queue<string> filaFalas;
+    private int indiceFalas;
 
-    public void IniciarDialogo(Dialogo dialogo)
+    public bool fimDialogo = false;
+
+   
+
+    public void IniciarDialogo()
     {
-        _caixaDeDialogo.SetActive(true);
+        caixaDeDialogo.SetActive(true);
 
-        _filaFalas = new Queue<string>();
+        filaFalas = new Queue<string>();
 
-        _dialogoAtual = dialogo;
-        _indiceFalas = 0;
+        indiceFalas = 0;
 
         ProximaFala();
 
@@ -32,38 +35,44 @@ public class SistemaDeDialogo : MonoBehaviour
 
     public void ProximaFala()
     {
-        if(_filaFalas.Count == 0)
+        if(filaFalas.Count == 0)
         {
-            if (_indiceFalas < _dialogoAtual.Falas.Length)
+            if (indiceFalas < dialogoAtual.Falas.Length)
             {
                 //colocar o som do personagem se expressando
                 
 
                 //coloca o nome do personagem na caixa de diálogo e arruma o tamanho
-                _nomePersonagem.text = _dialogoAtual.Falas[_indiceFalas].Personagem.Nome;
+                nomePersonagem.text = dialogoAtual.Falas[indiceFalas].Personagem.Nome;
 
                 //coloca todas as falas da expressão atual em um fila
-                foreach (string textoFala in _dialogoAtual.Falas[_indiceFalas].TextoDasFalas)
+                foreach (string textoFala in dialogoAtual.Falas[indiceFalas].TextoDasFalas)
                 {
-                    _filaFalas.Enqueue(textoFala);
+                    filaFalas.Enqueue(textoFala);
                 }
 
-                _indiceFalas++;
+                indiceFalas++;
             }
 
             else
             {
-                _caixaDeDialogo.SetActive(false);
+                caixaDeDialogo.SetActive(false);
+                fimDialogo = !fimDialogo;
                 return;
             }
 
         }
 
 
-        _textoFala.text = _filaFalas.Dequeue();
+        textoFala.text = filaFalas.Dequeue();
 
 
 
 
+    }
+
+    public bool TerminoDialogo()
+    {
+        return fimDialogo;
     }
 }

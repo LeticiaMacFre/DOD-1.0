@@ -17,6 +17,8 @@ TagManager:
   - Tree
   - Trigger
   - Pedra
+  - Dialogo
+  - CenaComerciante
   layers:
   - Default
   - TransparentFX
