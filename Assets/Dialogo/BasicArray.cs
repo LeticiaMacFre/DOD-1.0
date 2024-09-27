@@ -7,8 +7,6 @@ using UnityEngine;
 
 public class BasicArray : MonoBehaviour
 {
-    private TMP_Text[] nome;
-    private TMP_Text[] fala;
 
     private TMP_Text fala0;
     private TMP_Text fala1;
@@ -17,6 +15,10 @@ public class BasicArray : MonoBehaviour
     private TMP_Text fala4;
     private TMP_Text fala5;
     private TMP_Text fala6;
+
+    private TMP_Text nomeRob;
+    private TMP_Text nomeComerciante;
+
 
 
  private void Awake()
@@ -29,12 +31,11 @@ public class BasicArray : MonoBehaviour
         fala5.text = "Então prepare-se para correr! Fugir!";
         fala6.text = "Terei cuidado! Até logo!";
 
+        nomeRob.text = "ROBSON";
+        nomeComerciante.text = "WILLIAM";
+
  }
 
-    private void Start()
-    {
-        fala = new TMP_Text[] { fala0, fala1, fala2, fala3, fala4, fala5, fala6, null };
-    }
 
 }
 
