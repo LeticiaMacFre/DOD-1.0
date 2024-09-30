@@ -19,7 +19,7 @@ public class MenuPrincipal : MonoBehaviour
 
         if(SceneManager.GetActiveScene().name == "MenuPrincipal")
         {
-            Cursor.visible = cursorStatus;
+            //Cursor.visible = cursorStatus;
         }
     }
 
@@ -49,7 +49,7 @@ public class MenuPrincipal : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("Casarobson");
-        Cursor.visible = !cursorStatus;
+        //Cursor.visible = !cursorStatus;
         Destroy(sound);
     }
 
@@ -76,14 +76,14 @@ public class MenuPrincipal : MonoBehaviour
     private void Pause()
     {
         Time.timeScale = 0;
-        Cursor.visible = !cursorStatus;
+       // Cursor.visible = !cursorStatus;
         isPaused = true;
     }
 
     private void Resume()
     {
         Time.timeScale = 1;
-        Cursor.visible = !cursorStatus;
+       // Cursor.visible = !cursorStatus;
         isPaused = false;
     }
 }

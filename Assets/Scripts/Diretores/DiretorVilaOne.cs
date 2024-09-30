@@ -7,10 +7,10 @@ public class DiretorVilaOne : MonoBehaviour
     // Start is called before the first frame update
 
 
-    private robsonAndando playerRob;
+    public robsonAndando playerRob;
     private TriggerDialogo TriggerDialogo;
     private SistemaDeDialogo sistemaDeDialogo;
-    private BasicArray arrayDialogo;
+   
 
     private bool inicioDialogo = false;
 
@@ -22,7 +22,7 @@ public class DiretorVilaOne : MonoBehaviour
         sistemaDeDialogo = GameObject.FindGameObjectWithTag("Dialogo").GetComponent<SistemaDeDialogo>();
         TriggerDialogo = GameObject.FindGameObjectWithTag("CenaComerciante").GetComponent<TriggerDialogo>();
         playerRob = GameObject.FindGameObjectWithTag("Player").GetComponent<robsonAndando>();
-        arrayDialogo = GameObject.Find("Array").GetComponent<BasicArray>();
+       
 
         animRob = playerRob.GetComponent<Animator>();
     }
@@ -37,6 +37,14 @@ public class DiretorVilaOne : MonoBehaviour
         if(inicioDialogo)
         {
             sistemaDeDialogo.IniciarDialogo();
+            inicioDialogo = false;
         }
+
+        if(sistemaDeDialogo.FimDialogo())
+        {
+            playerRob.FimDialogo();
+            sistemaDeDialogo.FinalizaDialogo();
+        }
+
     }
 }

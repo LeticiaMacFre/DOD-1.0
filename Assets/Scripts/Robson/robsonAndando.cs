@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,7 +29,8 @@ public class robsonAndando : MonoBehaviour
     
     private bool estaVivo = true;
     private bool isJumping;
-    private bool cinematic = false;
+    public bool cinematic = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -128,8 +126,16 @@ public class robsonAndando : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Trigger"))
         {
-            Debug.Log("TEste");
+            Debug.Log("Teste");
             collision.gameObject.GetComponent<Rigidbody2D>().simulated = true;
+        }
+
+        if (collision.gameObject.CompareTag("CenaComerciante"))
+        {
+            EstaDialogando();
+            animPlayer.SetLayerWeight(1, 0);
+            animPlayer.SetLayerWeight(3, 1);
+           
         }
 
     }
@@ -199,5 +205,16 @@ public class robsonAndando : MonoBehaviour
     public void Pulo()
     {
         Pulando();
+    }
+
+    public void EstaDialogando()
+    {
+        cinematic = true;
+    }
+
+    public void FimDialogo()
+    {
+        cinematic = false;
+        animPlayer.SetLayerWeight(3, 0);
     }
 }

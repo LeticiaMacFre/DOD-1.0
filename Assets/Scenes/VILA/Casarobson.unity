@@ -1650,61 +1650,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &633048151
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 633048153}
-  - component: {fileID: 633048154}
-  m_Layer: 0
-  m_Name: Array
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &633048153
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633048151}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.924402, y: 0.5598216, z: -0.10789138}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &633048154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633048151}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eb02353efdc32b4c9c74785bb7574da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nome:
-  - {fileID: 0}
-  - {fileID: 0}
-  fala:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &647666021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2684,7 +2629,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2658679815405669573, guid: 9e982da82bf49e74a8f104a14be335c4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.33
+      value: -17.8
       objectReference: {fileID: 0}
     - target: {fileID: 2658679815405669573, guid: 9e982da82bf49e74a8f104a14be335c4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3672,6 +3617,24 @@ MonoBehaviour:
   somDaExpressao: {fileID: 0}
   nomePersonagem: {fileID: 899942793}
   textoFala: {fileID: 2144139067}
+  textoBotao: {fileID: 1342525430}
+  falas:
+  - "Ol\xE1 William!"
+  - "Ol\xE1 jovem Rob! Como vai?"
+  - Bem! Estou a caminho da floresta
+  - "H\xE1 rumores de drag\xF5es por l\xE1 Rob!"
+  - "Vou descobrir se \xE9 verdade hehe"
+  - "Ent\xE3o prepare-se para correr! Fugir!"
+  - "Terei cuidado! At\xE9 logo!"
+  quemFala:
+  - ROBSON
+  - WILLIAM
+  - ROBSON
+  - WILLIAM
+  - ROBSON
+  - WILLIAM
+  - ROBSON
+  controleFalas: 0
 --- !u!4 &1236245643
 Transform:
   m_ObjectHideFlags: 0
@@ -4563,6 +4526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0433421bdb96e247bde77522b000f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerRob: {fileID: 0}
   animRob: {fileID: 0}
 --- !u!4 &1441137748
 Transform:
@@ -5279,6 +5243,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60563b86c48cdbc4eb8b4aceb1567230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1613405302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613405304}
+  - component: {fileID: 1613405303}
+  m_Layer: 0
+  m_Name: menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1613405303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613405302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fe277141f966444b3935b90801dcb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sound: {fileID: 0}
+  menuInGame: {fileID: 1728682456}
+  isPaused: 0
+  cursorStatus: 1
+--- !u!4 &1613405304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613405302}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.373288, y: 0.5382509, z: 0.1260067}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642138212
 GameObject:
   m_ObjectHideFlags: 0
@@ -7821,4 +7833,4 @@ SceneRoots:
   - {fileID: 1751865881}
   - {fileID: 1236245643}
   - {fileID: 1441137748}
-  - {fileID: 633048153}
+  - {fileID: 1613405304}
