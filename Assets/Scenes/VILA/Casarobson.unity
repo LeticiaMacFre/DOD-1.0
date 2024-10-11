@@ -3450,7 +3450,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1613405303}
         m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
         m_MethodName: MenuInGame
         m_Mode: 1
@@ -3733,7 +3733,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1613405303}
         m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -5272,7 +5272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fe277141f966444b3935b90801dcb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 0}
+  sound: {fileID: 647666021}
   menuInGame: {fileID: 1728682456}
   isPaused: 0
   cursorStatus: 1
@@ -6228,7 +6228,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1613405303}
         m_TargetAssemblyTypeName: MenuPrincipal, Assembly-CSharp
         m_MethodName: MenuInGame
         m_Mode: 1
