@@ -415,8 +415,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360, y: -147.19217}
-  m_SizeDelta: {x: 51, y: 50}
+  m_AnchoredPosition: {x: -877, y: -433}
+  m_SizeDelta: {x: 99.5786, y: 97.6261}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &73644572
 MonoBehaviour:
@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 96213275}
   - component: {fileID: 96213278}
   - component: {fileID: 96213279}
+  - component: {fileID: 96213280}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -665,6 +666,27 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!95 &96213280
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96213274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4e55a67fbe659ad40a9e391286943853, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &116258250
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1205,7 @@ GameObject:
   - component: {fileID: 290724548}
   m_Layer: 0
   m_Name: ovo
-  m_TagString: Untagged
+  m_TagString: ovo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3614,7 +3636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &957360528
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5188,11 +5210,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ovo: {fileID: 290724544}
   dragao: {fileID: 925381328}
+  cam: {fileID: 0}
   robson: {fileID: 0}
   robsonAnim: {fileID: 0}
   saida: {fileID: 1523751670}
   sound: {fileID: 1983193464}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 1983193465}
   openEgg: {fileID: 8300000, guid: ea4e826cb1ddd0240a123702e2bbd910, type: 3}
   caveLoop: {fileID: 8300000, guid: 8eeb2ae6dade7624c8fad8deeb69e69b, type: 3}
   startAnimation: 0
@@ -5394,10 +5417,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -6036,7 +6059,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38483858, y: 0.48863637}
   m_AnchorMax: {x: 0.6154844, y: 0.6305228}
-  m_AnchoredPosition: {x: 0.0025024414, y: -0.70000076}
+  m_AnchoredPosition: {x: 0.0025024414, y: -0.69999695}
   m_SizeDelta: {x: 2, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959457682
@@ -6411,7 +6434,7 @@ Transform:
   m_GameObject: {fileID: 1983193464}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100.72242, y: 1.8590677, z: -0.108189}
+  m_LocalPosition: {x: 1.7, y: 1.8590677, z: -0.108189}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6451,7 +6474,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0025024414, y: 0.0009765625}
+  m_AnchoredPosition: {x: 0.0024414062, y: 0.0009765625}
   m_SizeDelta: {x: 0.0050049, y: -0.0019836}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2009666037

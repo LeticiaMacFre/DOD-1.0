@@ -19,6 +19,7 @@ TagManager:
   - Pedra
   - Dialogo
   - CenaComerciante
+  - ovo
   layers:
   - Default
   - TransparentFX

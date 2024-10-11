@@ -87,7 +87,7 @@ public class AureliusController : MonoBehaviour
         if (hit.collider != null)
         {
             // If the player is grounded, check if their vertical velocity is greater than 0
-            if (hit.collider.gameObject.CompareTag("Ground") && playerTransform.GetComponent<Rigidbody2D>().velocity.y > 0f)
+            if (hit.collider.gameObject.CompareTag("ground") && playerTransform.GetComponent<Rigidbody2D>().velocity.y > 0f)
             {
                 return true;
             }

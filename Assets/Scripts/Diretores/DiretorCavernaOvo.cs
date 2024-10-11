@@ -8,7 +8,9 @@ public class DiretorCavernaOvo : MonoBehaviour
     private Animator ovoAnim;
     
     public GameObject dragao;
-    
+
+    public Animator cam;
+
     public robsonAndando robson;
     public Animator robsonAnim;
     
@@ -33,6 +35,7 @@ public class DiretorCavernaOvo : MonoBehaviour
         sysDialogo = GameObject.FindGameObjectWithTag("Dialogo").GetComponent<SistemaDeDialogo>();
         robsonAnim = robson.GetComponent<Animator>();
         ovoAnim = ovo.GetComponent<Animator>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
         audioSource = sound.GetComponent<AudioSource>();
     }
 
@@ -56,6 +59,7 @@ public class DiretorCavernaOvo : MonoBehaviour
         yield return new WaitForSeconds(tempoCena);
         ovo.SetActive(false);
         dragao.SetActive(true);
+        cam.SetBool("Tremor", true);
         dragao.GetComponent<AureluisAI>().enabled = true;
         robson.Cinematic();
         robsonAnim.SetLayerWeight(3, 0);

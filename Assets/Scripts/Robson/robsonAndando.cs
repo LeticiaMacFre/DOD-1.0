@@ -126,7 +126,6 @@ public class robsonAndando : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Trigger"))
         {
-            Debug.Log("Teste");
             collision.gameObject.GetComponent<Rigidbody2D>().simulated = true;
         }
 
