@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1b2246f0238e5bf4bb0cdee9df716cd8
+guid: 2eea3ac52e553664b8c9b467bfc5615c
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -106,11 +106,24 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rabson andando A_0
+      name: Comerciante piscando_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 461607d8179dc36439cd58f8319e61ee
-      internalID: -730069095
+      spriteID: bf47ced275f75104b8de3e98825d8554
+      internalID: -1563849393
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabson andando A_1
+      name: Comerciante piscando_1
       rect:
         serializedVersion: 2
         x: 400
@@ -145,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a22d496930da8a24c9cef0e935ef55a7
-      internalID: 1148265774
+      spriteID: dba65905bc7c4b4479cc3bd80b85df22
+      internalID: -878195927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabson andando A_2
+      name: Comerciante piscando_2
       rect:
         serializedVersion: 2
         x: 800
@@ -166,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fd5176637cffde4684580e374f9bae5
-      internalID: 2053814337
+      spriteID: 2195aa6f9ba6dab4f8db819eb1883c05
+      internalID: 897597891
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rabson andando A_3
+      name: Comerciante piscando_3
       rect:
         serializedVersion: 2
         x: 1200
@@ -187,8 +200,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a7a4cc74f8b045478a1047f20169cbe
-      internalID: 1590372598
+      spriteID: 94a333032556b094eac00dc8416c9643
+      internalID: 212192133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Comerciante piscando_4
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176aee62cd5b69043ac83cf3b0117a4c
+      internalID: 530502141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Comerciante piscando_5
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0665753a632bc44b9ba08a866ad18fc
+      internalID: 1053957191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Comerciante piscando_6
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 400
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b729f0823afe944c99eceb6981683a3
+      internalID: 1618266192
       vertices: []
       indices: 
       edges: []
@@ -204,10 +280,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      rabson andando A_0: -730069095
-      rabson andando A_1: 1148265774
-      rabson andando A_2: 2053814337
-      rabson andando A_3: 1590372598
+      Comerciante piscando_0: -1563849393
+      Comerciante piscando_1: -878195927
+      Comerciante piscando_2: 897597891
+      Comerciante piscando_3: 212192133
+      Comerciante piscando_4: 530502141
+      Comerciante piscando_5: 1053957191
+      Comerciante piscando_6: 1618266192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
