@@ -3853,7 +3853,7 @@ MonoBehaviour:
   textoBotao: {fileID: 1342525430}
   somDialogo: {fileID: 1112741463}
   openEgg: {fileID: 8300000, guid: ea4e826cb1ddd0240a123702e2bbd910, type: 3}
-  sound: {fileID: 0}
+  sound: {fileID: 1112741462}
   falas:
   - "Ol\xE1 William!"
   - "Ol\xE1 jovem Rob! Como vai?"

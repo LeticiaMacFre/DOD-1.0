@@ -5,6 +5,7 @@ using UnityEngine;
 public class DiretorCavernaOvo : MonoBehaviour
 {
     public GameObject ovo;
+    public GameObject pedras;
     private Animator ovoAnim;
     
     public GameObject dragao;
@@ -63,6 +64,7 @@ public class DiretorCavernaOvo : MonoBehaviour
         dragao.GetComponent<AureluisAI>().enabled = true;
         robson.Cinematic();
         robsonAnim.SetLayerWeight(3, 0);
+        pedras.SetActive(true);
         saida.SetActive(true);
         audioSource.clip = caveLoop;
         audioSource.Play();

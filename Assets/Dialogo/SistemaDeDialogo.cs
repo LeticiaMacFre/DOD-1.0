@@ -36,7 +36,8 @@ public class SistemaDeDialogo : MonoBehaviour
         textoFala.text = falas[controleFalas];
     }
 
-   
+
+
     public void IniciarDialogo()
     {
         caixaDeDialogo.SetActive(true);
@@ -56,10 +57,12 @@ public class SistemaDeDialogo : MonoBehaviour
             controleFalas++;
             nomePersonagem.text = quemFala[controleFalas];
             textoFala.text = falas[controleFalas];
+            
             somDialogo.clip = openEgg;
             somDialogo.Play();
             somDialogo.loop = false;
         }
+        
         else if(controleFalas == totalFalas)
         {
             textoBotao.text = "Close";
@@ -69,14 +72,14 @@ public class SistemaDeDialogo : MonoBehaviour
 
     }
 
-    public bool FimDialogo()
-    {
-        return fimDialogo;
-    }
-
     public void FinalizaDialogo()
     {
         caixaDeDialogo.SetActive(false);
+    }
+
+    public bool FimDialogo()
+    {
+        return fimDialogo;
     }
 
     
