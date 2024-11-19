@@ -176,15 +176,27 @@ public class robsonAndando : MonoBehaviour
         }
     }
 
-    public void Dano()
+ 
+
+    public void AtaqueRob(robsonAndando target)
     {
-        vidaRob = vidaRob - dano;
+        if(target != null)
+        {
+            target.TakeDamage(dano);
+            Debug.Log("Robson ataca o dragão inimigo, causando {dano} de dano.");
+        }
     }
 
-    //public void AtaqueRob()
-    //{
-    //    animPlayer.SetLayerWeight(4, 1);
-    //}
+    public void TakeDamage(int damage)
+    {
+        vidaRob -= damage;
+        Debug.Log("Robson recebeu {damage} de dano. Vida: {vidaRob} ");
+
+        if(vidaRob <= 0)
+        {
+            Debug.Log("Robson perdeu a batalha... mas não a guerra! Tente de novo.");
+        }
+    }
 
     public bool EstaVivo()
     {

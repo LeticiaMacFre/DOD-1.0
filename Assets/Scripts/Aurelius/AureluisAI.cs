@@ -22,6 +22,9 @@ public class AureluisAI : MonoBehaviour
     // The vertical speed at which the NPC moves
     public float verticalSpeed = 5.0f;
 
+    private int vidaAurelius = 70;
+    private int dano = 20;
+
     private void Start()
     {
         // Get the animator component
@@ -71,5 +74,27 @@ public class AureluisAI : MonoBehaviour
             animator.SetBool("IsMoving", false); // Used to trigger the idle animation
         }
     }
+
+    public void AttackAurelius(AureluisAI target)
+    {
+        if(target != null)
+        {
+            target.TakeDamage(dano);
+            Debug.Log("Aurelius ataca dragão inimigo, causando {dano} de dano.");
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        vidaAurelius -= damage;
+        Debug.Log("Aurelius recebeu {damage} de dano. Vida restante: {vidaAurelius}");
+
+        if(vidaAurelius <= 0)
+        {
+            Debug.Log("Aurelius foi terrivelmente ferido! Tente novamente depois de se recuperarem.");
+        }
+    }
+
+
 }
 
