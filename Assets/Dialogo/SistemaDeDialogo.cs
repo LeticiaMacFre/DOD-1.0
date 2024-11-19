@@ -11,11 +11,14 @@ using UnityEngine.UI;
 public class SistemaDeDialogo : MonoBehaviour
 {
     [SerializeField] public GameObject caixaDeDialogo;
-
-    [SerializeField] public AudioClip somDaExpressao;
     [SerializeField] public TMP_Text nomePersonagem;
     [SerializeField] public TMP_Text textoFala;
     [SerializeField] private TMP_Text textoBotao;
+
+    public AudioSource somDialogo;
+    public AudioClip openEgg;
+    public GameObject sound;
+    
 
     [SerializeField] private List<string> falas = new List<string>();
     [SerializeField] private List<string> quemFala= new List<string>();
@@ -33,10 +36,15 @@ public class SistemaDeDialogo : MonoBehaviour
         textoFala.text = falas[controleFalas];
     }
 
-   
+
+
     public void IniciarDialogo()
     {
         caixaDeDialogo.SetActive(true);
+        somDialogo = sound.GetComponent<AudioSource>();
+        somDialogo.clip = openEgg;
+        somDialogo.Play();
+        somDialogo.loop = false;
     }
 
     
@@ -49,7 +57,12 @@ public class SistemaDeDialogo : MonoBehaviour
             controleFalas++;
             nomePersonagem.text = quemFala[controleFalas];
             textoFala.text = falas[controleFalas];
+            
+            somDialogo.clip = openEgg;
+            somDialogo.Play();
+            somDialogo.loop = false;
         }
+        
         else if(controleFalas == totalFalas)
         {
             textoBotao.text = "Close";
@@ -59,14 +72,14 @@ public class SistemaDeDialogo : MonoBehaviour
 
     }
 
-    public bool FimDialogo()
-    {
-        return fimDialogo;
-    }
-
     public void FinalizaDialogo()
     {
         caixaDeDialogo.SetActive(false);
+    }
+
+    public bool FimDialogo()
+    {
+        return fimDialogo;
     }
 
     
