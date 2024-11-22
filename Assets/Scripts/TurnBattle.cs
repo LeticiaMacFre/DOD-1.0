@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
 public class TurnBattle : MonoBehaviour
 {
     public GameObject[] playerCharacters;
-    public string[] charactersNames;
     public GameObject enemyCharacter;
 
     private BatalhaVilao inimigo;
@@ -21,13 +21,13 @@ public class TurnBattle : MonoBehaviour
         inimigo = enemyCharacter.GetComponent<BatalhaVilao>();
     }
 
-    private void StartTurn()
+    public void StartTurn()
     {
         if (currentCharacterIndex < playerCharacters.Length)
         {
             turnActive = true;
             timer = turnTime;
-            Debug.Log("É a vez de {charactersNames[currentCharacterIndex]}");
+            Debug.Log($"É a vez de {playerCharacters[currentCharacterIndex]}");
         }
         else
         {
@@ -57,8 +57,37 @@ public class TurnBattle : MonoBehaviour
         if(inimigo.VidaDoVilao() > 0)
         {
             var target = playerCharacters[Random.Range(0, playerCharacters.Length)];
-            
+            //inimigo.AtaqueAoPlayer(target);
+          
+        }
+
+
+        currentCharacterIndex = 0;
+        StartTurn();
+    }
+
+    private void Update()
+    {
+        if(turnActive)
+        {
+            timer -= Time.deltaTime;
+
+            if(timer <= 0)
+            {
+                Debug.Log("Tempo acabou! Turno finalizado automaticamente.");
+                EndPlayerTurn();
+            }
         }
     }
+
+    public void OnPlayerActionCompleted()
+    {
+        EndPlayerTurn();
+    }
+
+
+    
+
+
 
 }

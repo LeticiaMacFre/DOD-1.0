@@ -9,7 +9,11 @@ public class BatalhaVilao : MonoBehaviour
     private int ataqueEspecial;
 
     public bool isPlayerControlled = true;
-    
+
+    public GameObject alvo;
+
+    private TurnBattle turnBattle;
+
     private Animator animVilao;
 
     private SpriteRenderer spriteInimigo;
@@ -27,6 +31,7 @@ public class BatalhaVilao : MonoBehaviour
     public bool inicioAtaque = false;
     public bool robsonColisao = false;
 
+
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +40,7 @@ public class BatalhaVilao : MonoBehaviour
         
         zonaDeAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
         zonaDeDano = GameObject.Find("zona dano").GetComponent<ZonaDeDano>();
+        turnBattle = GameObject.FindGameObjectWithTag("turnBattle").GetComponent<TurnBattle>();
        
         spriteInimigo = GetComponent<SpriteRenderer>();
         animVilao = GetComponent<Animator>();
@@ -125,6 +131,18 @@ public class BatalhaVilao : MonoBehaviour
     {
         ataqueSimples = Random.Range(3, 8);
         ataqueEspecial = Random.Range(9, 12);
+    }
+
+
+
+    public void TakeDamage(int damage)
+    {
+        vidaVilao -= damage;
+
+        if(vidaVilao < 20)
+        {
+            Debug.Log("O dragão inimigo decidiu fugir");
+        }
     }
 
     

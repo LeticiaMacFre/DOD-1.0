@@ -24,8 +24,10 @@ public class robsonAndando : MonoBehaviour
 
     private string nomeObjetoTrigger;
     
-    private int vidaRob = 55;
-    private int dano = 15;
+    private int vidaRob = 80;
+    private int ataque;
+    private int ataqueSuperior;
+    private int ultraAtaque;
     
     private bool estaVivo = true;
     private bool isJumping;
@@ -178,19 +180,18 @@ public class robsonAndando : MonoBehaviour
 
  
 
-    public void AtaqueRob(robsonAndando target)
+    public void AtaqueRob()
     {
-        if(target != null)
-        {
-            target.TakeDamage(dano);
-            Debug.Log("Robson ataca o dragão inimigo, causando {dano} de dano.");
-        }
+        ataque = Random.Range(2, 5);
+        ataqueSuperior = Random.Range(6, 10);
+        ultraAtaque = Random.Range(15, 20);
+
     }
 
     public void TakeDamage(int damage)
     {
         vidaRob -= damage;
-        Debug.Log("Robson recebeu {damage} de dano. Vida: {vidaRob} ");
+        Debug.Log($"Robson recebeu {damage} de dano. Vida: {vidaRob} ");
 
         if(vidaRob <= 0)
         {
