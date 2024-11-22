@@ -5,7 +5,10 @@ using UnityEngine;
 public class BatalhaVilao : MonoBehaviour
 { 
     private int vidaVilao = 150;
-    private int dano = 30;
+    private int ataqueSimples;
+    private int ataqueEspecial;
+
+    public bool isPlayerControlled = true;
     
     private Animator animVilao;
 
@@ -23,6 +26,7 @@ public class BatalhaVilao : MonoBehaviour
     public bool robAtackDano = false;
     public bool inicioAtaque = false;
     public bool robsonColisao = false;
+
     
     // Start is called before the first frame update
     void Start()
@@ -72,13 +76,12 @@ public class BatalhaVilao : MonoBehaviour
         animVilao.SetLayerWeight(1, 1);
     }
 
-    public void DanoVilao()
+    public int VidaDoVilao()
     {
-        
-        vidaVilao = vidaVilao - dano;
+        return vidaVilao;
     }
 
-    public void Ataque()
+    public void AtaqueAnim()
     {
         animVilao.SetLayerWeight(1, 0);
         animVilao.SetLayerWeight(2, 1);
@@ -111,11 +114,17 @@ public class BatalhaVilao : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         AntecipaAtaque();
         yield return new WaitForSeconds(2.0f);
-        Ataque();
+        AtaqueAnim();
         yield return new WaitForSeconds(1.0f);
         Idle();
         inicioAtaque = !inicioAtaque;
 
+    }
+
+    public void AtaqueBatalha()
+    {
+        ataqueSimples = Random.Range(3, 8);
+        ataqueEspecial = Random.Range(9, 12);
     }
 
     
