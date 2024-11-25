@@ -17,7 +17,7 @@ public class SistemaDeDialogo : MonoBehaviour
 
     public AudioSource somDialogo;
     public AudioClip openEgg;
-    public GameObject sound;
+    //public GameObject sound;
     
 
     [SerializeField] private List<string> falas = new List<string>();
@@ -34,6 +34,7 @@ public class SistemaDeDialogo : MonoBehaviour
         controleFalas = 0;
         nomePersonagem.text = quemFala[controleFalas];
         textoFala.text = falas[controleFalas];
+        somDialogo = GetComponent<AudioSource>();
     }
 
 
@@ -41,32 +42,26 @@ public class SistemaDeDialogo : MonoBehaviour
     public void IniciarDialogo()
     {
         caixaDeDialogo.SetActive(true);
-        somDialogo = sound.GetComponent<AudioSource>();
-        somDialogo.clip = openEgg;
-        somDialogo.Play();
-        somDialogo.loop = false;
+        somDialogo.PlayOneShot(openEgg);
     }
 
     
     public void ProximaFala()
     {
-        int totalFalas = falas.Count -1;
+        int totalFalas = falas.Count;
 
-        if(controleFalas < totalFalas)
+        if(controleFalas <= falas.Count)
         {
             controleFalas++;
             nomePersonagem.text = quemFala[controleFalas];
             textoFala.text = falas[controleFalas];
-            
-            somDialogo.clip = openEgg;
-            somDialogo.Play();
-            somDialogo.loop = false;
-        }
-        
-        else if(controleFalas == totalFalas)
-        {
-            textoBotao.text = "Close";
-            fimDialogo = true;
+
+            somDialogo.PlayOneShot(openEgg);
+
+            if (controleFalas == totalFalas - 1)
+            {
+                textoBotao.text = "Close";
+            }
         }
         
 

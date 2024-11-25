@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class robsonAndando : MonoBehaviour
+public class robsonAndando : Character
 {
 
     private Rigidbody2D rigAndando;
@@ -23,11 +23,6 @@ public class robsonAndando : MonoBehaviour
     private Vector3 movement;
 
     private string nomeObjetoTrigger;
-    
-    private int vidaRob = 80;
-    private int ataque;
-    private int ataqueSuperior;
-    private int ultraAtaque;
     
     private bool estaVivo = true;
     private bool isJumping;
@@ -68,12 +63,10 @@ public class robsonAndando : MonoBehaviour
             {
                 Pulando();
             }
-
-          
            
         } 
 
-        if (vidaRob <= 0)
+        if (health <= 0)
         {
             estaVivo = false;
         }
@@ -175,27 +168,6 @@ public class robsonAndando : MonoBehaviour
         {
             Debug.Log("parado");
             return "parado";
-        }
-    }
-
- 
-
-    public void AtaqueRob()
-    {
-        ataque = Random.Range(2, 5);
-        ataqueSuperior = Random.Range(6, 10);
-        ultraAtaque = Random.Range(15, 20);
-
-    }
-
-    public void TakeDamage(int damage)
-    {
-        vidaRob -= damage;
-        Debug.Log($"Robson recebeu {damage} de dano. Vida: {vidaRob} ");
-
-        if(vidaRob <= 0)
-        {
-            Debug.Log("Robson perdeu a batalha... mas não a guerra! Tente de novo.");
         }
     }
 

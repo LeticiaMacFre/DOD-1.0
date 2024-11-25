@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AureluisAI : MonoBehaviour
+public class AureluisAI : Character
 {
     // The player's transform
     public Transform player;
@@ -21,10 +21,6 @@ public class AureluisAI : MonoBehaviour
 
     // The vertical speed at which the NPC moves
     public float verticalSpeed = 5.0f;
-
-    private int vidaAurelius = 100;
-    private int ataqueBasico;
-    private int melhorAtaque;
 
     private void Start()
     {
@@ -73,22 +69,6 @@ public class AureluisAI : MonoBehaviour
         {
             // Set the "IsMoving" boolean to false
             animator.SetBool("IsMoving", false); // Used to trigger the idle animation
-        }
-    }
-
-    public void AtaqueAurelius()
-    {
-        ataqueBasico = Random.Range(2, 5);
-        melhorAtaque = Random.Range(10, 13);
-    }
-
-    public void TakeDamage(int damage)
-    {
-        vidaAurelius -= damage;
-
-        if(vidaAurelius <= 0)
-        {
-            Debug.Log("Tente novamente");
         }
     }
 

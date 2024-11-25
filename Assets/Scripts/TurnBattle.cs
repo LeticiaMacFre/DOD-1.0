@@ -5,21 +5,14 @@ using UnityEngine;
 
 public class TurnBattle : MonoBehaviour
 {
-    public GameObject[] playerCharacters;
-    public GameObject enemyCharacter;
-
-    private BatalhaVilao inimigo;
+    public Character[] playerCharacters;
+    public Character enemy;
 
     private int currentCharacterIndex = 0;
-
     private float turnTime = 30f;
     private float timer;
     private bool turnActive = false;
 
-    private void Start()
-    {
-        inimigo = enemyCharacter.GetComponent<BatalhaVilao>();
-    }
 
     public void StartTurn()
     {
@@ -27,7 +20,7 @@ public class TurnBattle : MonoBehaviour
         {
             turnActive = true;
             timer = turnTime;
-            Debug.Log($"É a vez de {playerCharacters[currentCharacterIndex]}");
+            Debug.Log($"Turno de {playerCharacters[currentCharacterIndex].characterName} começou!");
         }
         else
         {
@@ -37,8 +30,8 @@ public class TurnBattle : MonoBehaviour
 
     public void EndPlayerTurn()
     {
-        currentCharacterIndex++;
         turnActive = false;
+        currentCharacterIndex++;
 
         if (currentCharacterIndex >= playerCharacters.Length)
         {
@@ -54,11 +47,13 @@ public class TurnBattle : MonoBehaviour
 
     public void StartEnemyTurn()
     {
-        if(inimigo.VidaDoVilao() > 0)
+        Debug.Log("Turno do inimigo");
+
+        if(enemy.health > 0)
         {
             var target = playerCharacters[Random.Range(0, playerCharacters.Length)];
-            //inimigo.AtaqueAoPlayer(target);
-          
+            int attackType = Random.Range(1, 3);
+            enemy.Attack(target, attackType);
         }
 
 
@@ -80,9 +75,21 @@ public class TurnBattle : MonoBehaviour
         }
     }
 
-    public void OnPlayerActionCompleted()
+    
+    public void PlayerAttack(int attackType)
     {
-        EndPlayerTurn();
+        if(turnActive)
+        {
+            playerCharacters[currentCharacterIndex].Attack(enemy, attackType);
+        }
+    }
+
+    public void EndTurnManually()
+    {
+        if(turnActive)
+        {
+            Debug.Log($"{playerCharacters[currentCharacterIndex].characterName} terminou o turno. ");
+        }
     }
 
 

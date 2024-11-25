@@ -1,18 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
-public class BatalhaVilao : MonoBehaviour
-{ 
-    private int vidaVilao = 150;
-    private int ataqueSimples;
-    private int ataqueEspecial;
-
+public class BatalhaVilao : Character 
+{
     public bool isPlayerControlled = true;
-
-    public GameObject alvo;
-
-    private TurnBattle turnBattle;
 
     private Animator animVilao;
 
@@ -40,7 +33,6 @@ public class BatalhaVilao : MonoBehaviour
         
         zonaDeAtaque = GameObject.Find("zona ataque").GetComponent<ZonaDeAtaque>();
         zonaDeDano = GameObject.Find("zona dano").GetComponent<ZonaDeDano>();
-        turnBattle = GameObject.FindGameObjectWithTag("turnBattle").GetComponent<TurnBattle>();
        
         spriteInimigo = GetComponent<SpriteRenderer>();
         animVilao = GetComponent<Animator>();
@@ -82,11 +74,6 @@ public class BatalhaVilao : MonoBehaviour
         animVilao.SetLayerWeight(1, 1);
     }
 
-    public int VidaDoVilao()
-    {
-        return vidaVilao;
-    }
-
     public void AtaqueAnim()
     {
         animVilao.SetLayerWeight(1, 0);
@@ -112,7 +99,6 @@ public class BatalhaVilao : MonoBehaviour
 
        
    }
-
   
     IEnumerator AtaquePatada()
     {
@@ -126,25 +112,5 @@ public class BatalhaVilao : MonoBehaviour
         inicioAtaque = !inicioAtaque;
 
     }
-
-    public void AtaqueBatalha()
-    {
-        ataqueSimples = Random.Range(3, 8);
-        ataqueEspecial = Random.Range(9, 12);
-    }
-
-
-
-    public void TakeDamage(int damage)
-    {
-        vidaVilao -= damage;
-
-        if(vidaVilao < 20)
-        {
-            Debug.Log("O dragão inimigo decidiu fugir");
-        }
-    }
-
-    
 
 }
