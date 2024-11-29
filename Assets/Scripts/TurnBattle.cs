@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurnBattle : MonoBehaviour
 {
     public Character[] playerCharacters;
     public Character enemy;
+
+    public GameObject enunciador;
+    //public TMP_text textoEnunciador;
 
     private int currentCharacterIndex = 0;
     private float turnTime = 30f;
@@ -91,6 +95,7 @@ public class TurnBattle : MonoBehaviour
             Debug.Log($"{playerCharacters[currentCharacterIndex].characterName} terminou o turno. ");
         }
     }
+
 
 
     
