@@ -48,20 +48,21 @@ public class SistemaDeDialogo : MonoBehaviour
     
     public void ProximaFala()
     {
-        int totalFalas = falas.Count;
+        int totalFalas = falas.Count - 1;
+        int totalClicks = falas.Count;
 
-        if(controleFalas <= falas.Count)
+        if (controleFalas < totalFalas)
         {
             controleFalas++;
             nomePersonagem.text = quemFala[controleFalas];
             textoFala.text = falas[controleFalas];
 
             somDialogo.PlayOneShot(openEgg);
-
-            if (controleFalas == totalFalas - 1)
-            {
-                textoBotao.text = "Close";
-            }
+        }
+        else 
+        {
+            textoBotao.text = "Close";
+            fimDialogo = !fimDialogo;
         }
         
 

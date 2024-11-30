@@ -13,6 +13,7 @@ public class DiretorVilaOne : MonoBehaviour
    
 
     private bool inicioDialogo = false;
+    private bool fimDoDialogo = false;
 
     public Animator animRob;
     
@@ -31,6 +32,7 @@ public class DiretorVilaOne : MonoBehaviour
     void Update()
     {
          inicioDialogo = TriggerDialogo.PlayerPrimeiroDialogo();
+         fimDoDialogo = sistemaDeDialogo.FimDialogo();
          
         
 
@@ -40,7 +42,7 @@ public class DiretorVilaOne : MonoBehaviour
             inicioDialogo = false;
         }
 
-        if(sistemaDeDialogo.FimDialogo())
+        if(fimDoDialogo)
         {
             playerRob.FimDialogo();
             sistemaDeDialogo.FinalizaDialogo();
