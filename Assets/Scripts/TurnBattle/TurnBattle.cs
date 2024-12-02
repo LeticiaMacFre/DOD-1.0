@@ -10,13 +10,11 @@ public class TurnBattle : MonoBehaviour
     public Character enemy;
 
     public GameObject enunciador;
-    //public TMP_text textoEnunciador;
-
+    
     private int currentCharacterIndex = 0;
     private float turnTime = 30f;
     private float timer;
     private bool turnActive = false;
-
 
     public void StartTurn()
     {

@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class TriggerDialogo : MonoBehaviour
 {
-    public bool DialogoTrigger = false;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public bool InicioDialogo = false;
+
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            DialogoTrigger = !DialogoTrigger;
+            InicioDialogo = !InicioDialogo;
         }
     }
 
-    public bool PlayerPrimeiroDialogo()
+    public bool ComecarDialogo()
     {
-        return DialogoTrigger;
+        return InicioDialogo;
     }
+
+
+
 
 }

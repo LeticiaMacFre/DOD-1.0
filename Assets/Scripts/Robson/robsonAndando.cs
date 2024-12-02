@@ -124,14 +124,13 @@ public class robsonAndando : Character
             collision.gameObject.GetComponent<Rigidbody2D>().simulated = true;
         }
 
-        if (collision.gameObject.CompareTag("CenaComerciante"))
+        if (collision.gameObject.CompareTag("Dialogar"))
         {
             EstaDialogando();
             animPlayer.SetLayerWeight(1, 0);
             animPlayer.SetLayerWeight(3, 1);
            
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D collision)

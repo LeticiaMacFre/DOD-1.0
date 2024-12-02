@@ -9,17 +9,13 @@ TagManager:
   - Aurelius
   - diretor
   - vilao
-  - zona de dano
-  - zona de desaceleracao
   - Inimigo
-  - zona de ataque
-  - Batalha
   - Tree
   - Trigger
   - Pedra
   - Dialogo
-  - CenaComerciante
   - ovo
+  - Dialogar
   layers:
   - Default
   - TransparentFX

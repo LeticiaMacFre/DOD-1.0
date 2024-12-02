@@ -16,20 +16,25 @@ public class SistemaDeDialogo : MonoBehaviour
     [SerializeField] private TMP_Text textoBotao;
 
     public AudioSource somDialogo;
-    public AudioClip openEgg;
-    //public GameObject sound;
-    
+    private AudioClip openEgg;
+
+    public bool InicioDialogo = false;
+    public bool FimDialogo = false;
+
+    public GameObject TriggerDialogo;
+    private TriggerDialogo triggerDialogo;
+    private robsonAndando robson;
 
     [SerializeField] private List<string> falas = new List<string>();
     [SerializeField] private List<string> quemFala= new List<string>();
 
     [SerializeField] private int controleFalas;
-
-    private bool fimDialogo = false;
-
     
     private void Start()
     {
+        triggerDialogo = GameObject.FindGameObjectWithTag("Dialogar").GetComponent<TriggerDialogo>();
+        robson = GameObject.FindGameObjectWithTag("Player").GetComponent<robsonAndando>();
+
         textoBotao.text = "Next";
         controleFalas = 0;
         nomePersonagem.text = quemFala[controleFalas];
@@ -37,7 +42,15 @@ public class SistemaDeDialogo : MonoBehaviour
         somDialogo = GetComponent<AudioSource>();
     }
 
+    private void Update()
+    {
+        InicioDialogo = triggerDialogo.ComecarDialogo();
 
+        if(InicioDialogo)
+        {
+            IniciarDialogo();
+        }
+    }
 
     public void IniciarDialogo()
     {
@@ -48,8 +61,7 @@ public class SistemaDeDialogo : MonoBehaviour
     
     public void ProximaFala()
     {
-        int totalFalas = falas.Count - 1;
-        int totalClicks = falas.Count;
+        int totalFalas = falas.Count;
 
         if (controleFalas < totalFalas)
         {
@@ -58,27 +70,29 @@ public class SistemaDeDialogo : MonoBehaviour
             textoFala.text = falas[controleFalas];
 
             somDialogo.PlayOneShot(openEgg);
+
+            if(controleFalas == totalFalas - 1)
+            {
+                textoBotao.text = "Close";
+            }
         }
-        else 
+
+        if(controleFalas == totalFalas)
         {
-            textoBotao.text = "Close";
-            fimDialogo = !fimDialogo;
+            FinalizaDialogo();
         }
-        
-
     }
-
     public void FinalizaDialogo()
     {
         caixaDeDialogo.SetActive(false);
+        robson.FimDialogo();
+        TriggerDialogo.SetActive(false);
+        FimDialogo = true;
     }
 
-    public bool FimDialogo()
+    public bool ComecarBatalha()
     {
-        return fimDialogo;
+        return FimDialogo;
     }
-
-    
-
 
 }
