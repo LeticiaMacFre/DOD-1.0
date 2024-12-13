@@ -2203,7 +2203,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a1394b9ff23731d47b812b77f95c6f22, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a284d2e06e69a2c4888407f1287090ec, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3374,11 +3374,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e9ba8d2902d6934fac5511827ed3b66, type: 3}
---- !u!1 &983437123 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3514286083168851937, guid: 9e9ba8d2902d6934fac5511827ed3b66, type: 3}
-  m_PrefabInstance: {fileID: 983437122}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1001123137
 GameObject:
   m_ObjectHideFlags: 0
@@ -6932,7 +6927,7 @@ Transform:
   m_GameObject: {fileID: 1791528087}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75.3, y: 0, z: -10}
+  m_LocalPosition: {x: 76.99, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7160,11 +7155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38ae672d6b0ad34abfe5dcc4b49df5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCharacters:
-  - {fileID: 909863741}
-  - {fileID: 983437123}
-  enemy: {fileID: 1993226952}
-  enunciador: {fileID: 1121019722}
+  playerCharacters: []
+  enemy: {fileID: 0}
+  enunciadorText: {fileID: 248699226}
+  timer: 0
+  fimDaBatalha: 0
 --- !u!4 &1817250749
 Transform:
   m_ObjectHideFlags: 0
@@ -7580,7 +7575,7 @@ Transform:
   m_GameObject: {fileID: 1903498829}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.5, y: 4.0681257, z: -0.0948386}
+  m_LocalPosition: {x: 76.8, y: 4.0681257, z: -0.0948386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8123,7 +8118,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
+  m_fontSize: 63.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8871,6 +8866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: "Drag\xE3o"
   health: 100
+  ehInimigo: 1
   isPlayerControlled: 1
   speed: 2
 --- !u!1 &1997750406
@@ -9072,6 +9068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enunciador: {fileID: 1121019722}
   botoesPlayer: {fileID: 1663518985}
+  startBatalha: 1
   terminouDialogo: 0
 --- !u!4 &2018532386
 Transform:

@@ -31,6 +31,9 @@ public class AureluisAI : Character
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         player = GameObject.FindWithTag("Player").GetComponent<Transform>();
+
+        characterName = "Aurelius";
+        
     }
 
     private void Update()

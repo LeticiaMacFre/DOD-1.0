@@ -6,10 +6,11 @@ public class Character : MonoBehaviour
 {
     public string characterName;
     public int health = 100;
-    private int minAtaque1 = 5;
-    private int maxAtaque1 = 10;
-    private int minAtaque2 = 12;
-    private int maxAtaque2 = 15;
+    protected int minAtaque1 = 5;
+    protected int maxAtaque1 = 10;
+    protected int minAtaque2 = 12;
+    protected int maxAtaque2 = 15;
+    [SerializeField] protected bool ehInimigo;
 
     public void Attack(Character target, int attackType)
     {
@@ -41,4 +42,24 @@ public class Character : MonoBehaviour
         }
     }
 
+    public bool EhInimigo()
+    {
+        return ehInimigo;
+    }
+
+    protected virtual void DefineInimigo(bool valor)
+    {
+        ehInimigo = valor; 
+    }
+
+    public bool VerificaSeEstahVivo()
+    {
+        if(health <= 0)
+        {
+            return false;
+        }
+
+        return true;
+    }
+ 
 }

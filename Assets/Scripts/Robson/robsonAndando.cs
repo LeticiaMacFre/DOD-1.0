@@ -36,6 +36,8 @@ public class robsonAndando : Character
         animPlayer = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
         audio = GetComponent<AudioSource>();
+        characterName = "Robson";
+       
     }
 
     private void Update()

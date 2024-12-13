@@ -40,6 +40,11 @@ public class SistemaDeDialogo : MonoBehaviour
         nomePersonagem.text = quemFala[controleFalas];
         textoFala.text = falas[controleFalas];
         somDialogo = GetComponent<AudioSource>();
+
+        if(caixaDeDialogo ==  null)
+        {
+            caixaDeDialogo = GameObject.Find("Caixa Dialogo");
+        }
     }
 
     private void Update()
@@ -49,6 +54,12 @@ public class SistemaDeDialogo : MonoBehaviour
         if(InicioDialogo)
         {
             IniciarDialogo();
+            InicioDialogo = false;
+        }
+
+        if(FimDialogo) 
+        {
+            caixaDeDialogo.SetActive(false);
         }
     }
 
@@ -76,21 +87,20 @@ public class SistemaDeDialogo : MonoBehaviour
                 textoBotao.text = "Close";
             }
         }
-
-        if(controleFalas == totalFalas)
+        else if (controleFalas == totalFalas)
         {
             FinalizaDialogo();
         }
     }
     public void FinalizaDialogo()
     {
-        caixaDeDialogo.SetActive(false);
-        robson.FimDialogo();
-        TriggerDialogo.SetActive(false);
         FimDialogo = true;
+        //caixaDeDialogo.SetActive(false);
+        TriggerDialogo.SetActive(false);
+        robson.FimDialogo();
     }
 
-    public bool ComecarBatalha()
+    public bool VerificaFimDialogo()
     {
         return FimDialogo;
     }

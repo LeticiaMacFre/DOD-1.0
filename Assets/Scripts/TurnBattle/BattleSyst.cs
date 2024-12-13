@@ -8,6 +8,7 @@ public class BattleSyst : MonoBehaviour
     private SistemaDeDialogo dialogo;
     public GameObject enunciador;
     public GameObject botoesPlayer;
+    public bool startBatalha = true;
 
     public bool terminouDialogo;
     private void Start()
@@ -18,13 +19,28 @@ public class BattleSyst : MonoBehaviour
 
     public void Update()
     {
-        terminouDialogo = dialogo.ComecarBatalha();
-
-        if (terminouDialogo)
+        if(dialogo.VerificaFimDialogo() && startBatalha)
         {
-            turnBattle.StartTurn();
-            enunciador.SetActive(true);
-            botoesPlayer.SetActive(true);
+            IniciaBatalha();
+            startBatalha = false;
         }
+
+        if (turnBattle.VerificaFimDaBatalha())
+        {
+
+        }
+    }
+
+    private void IniciaBatalha()
+    {
+        turnBattle.StartTurn();
+        enunciador.SetActive(true);
+        botoesPlayer.SetActive(true);
+    }
+
+    private void FimBatalha()
+    {
+        enunciador.SetActive(false);
+        botoesPlayer.SetActive(false);
     }
 }

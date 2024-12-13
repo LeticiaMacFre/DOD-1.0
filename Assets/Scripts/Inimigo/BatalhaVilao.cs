@@ -12,22 +12,15 @@ public class BatalhaVilao : Character
     private SpriteRenderer spriteInimigo;
 
     public float speed;
-
+    
     
     // Start is called before the first frame update
     void Start()
     {  
         spriteInimigo = GetComponent<SpriteRenderer>();
         animVilao = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        characterName = "Dragão";
        
     }
-
-    
-
 
 }

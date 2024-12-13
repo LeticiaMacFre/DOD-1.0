@@ -2828,9 +2828,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee5601fa05420b345910699ccfddce4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterName: 
+  health: 100
+  jump: {fileID: 0}
+  esqButton: {fileID: 0}
+  dirButton: {fileID: 0}
+  jumpButton: {fileID: 0}
   JumpForce: 0
   speedAndando: 5
-  jump: {fileID: 0}
+  cinematic: 0
 --- !u!114 &1835858034
 MonoBehaviour:
   m_ObjectHideFlags: 0
